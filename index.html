@@ -2,81 +2,136 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Aryoven Studio · Website Portfolio</title>
-<meta name="description" content="Mobile-first websites for restaurants, clinics and local services in Dubai, Istanbul and Europe.">
-<meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;600;700&family=Vazirmatn:wght@400;700&display=swap">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Aryoven Web Studio — Websites for Local Businesses</title>
+<meta name="description" content="We design fast, beautiful, mobile-friendly websites for local businesses. See our work and get a free homepage mockup.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F5F3EF;--ink:#16161A;--muted:#6B6A70;--line:#DEDBD4;--card:#fff;--accent:#3B4BDB;
---f-d:"Instrument Serif",Georgia,serif;--f-b:"Inter Tight",system-ui,sans-serif;--f-fa:"Vazirmatn",Tahoma,sans-serif}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--f-b)}
-.wrap{max-width:1080px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
-header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:20px}
-.logo{font-weight:700;letter-spacing:.02em}.logo span{color:var(--accent)}
-.hero .wrap{padding-block:30px 46px}
-h1{font-family:var(--f-d);font-weight:400;font-size:clamp(46px,9.5vw,96px);line-height:1;margin:0;text-wrap:balance}
-h1 i{color:var(--accent)}
-.fa{font-family:var(--f-fa);direction:rtl;text-align:right;font-size:18px;color:var(--muted);margin-top:18px}
-.lede{font-size:19px;color:var(--muted);max-width:46ch;margin-top:16px}
-.grid{display:grid;gap:22px;grid-template-columns:1fr;padding-bottom:50px}
-@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}
-.card{display:grid;gap:12px;text-decoration:none;color:inherit;min-width:0}
-.shot{position:relative;aspect-ratio:9/16;max-height:520px;width:100%;max-width:100%;border-radius:22px;overflow:hidden;background:var(--card);border:1px solid var(--line);box-shadow:0 24px 50px -32px rgba(0,0,0,.45);transition:transform .25s}
-.shot iframe{position:absolute;top:0;left:0;width:390px;height:693px;border:0;transform-origin:0 0;pointer-events:none}
-.card:hover .shot{transform:translateY(-4px)}
-.card b{font-size:19px}
-.card p{margin:0;color:var(--muted);font-size:15px}
-.tags{display:flex;gap:6px;flex-wrap:wrap}.tags span{font-size:12.5px;border:1px solid var(--line);border-radius:99px;padding:2px 9px;color:var(--muted)}
-.how{border-top:1px solid var(--line)}
-.how .wrap{display:grid;gap:18px;grid-template-columns:1fr;padding-block:40px}
-@media(min-width:760px){.how .wrap{grid-template-columns:repeat(3,1fr)}}
-.how b{display:block;font-family:var(--f-d);font-size:28px;font-weight:400}
-.how p{margin:4px 0 0;color:var(--muted)}
-footer .wrap{padding-block:30px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-@media(prefers-reduced-motion:reduce){.shot{transition:none}}
+:root { --bg: #07070d; --card: #10101a; --ink: #f2f2f7; --muted: #9a9bb0; --blue: #3b6bff; --purple: #9b5cff; --gold: #d4af6a; --line: #20202e;
+  --grad: linear-gradient(90deg, #3b6bff, #9b5cff); --sans: "Plus Jakarta Sans", system-ui, sans-serif; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(900px 600px at 90% -10%, rgba(124,58,237,.28), transparent 60%), radial-gradient(700px 500px at -10% 30%, rgba(47,91,255,.16), transparent 60%); background-repeat: no-repeat; }
+a { color: inherit; text-decoration: none; }
+.wrap { width: min(1200px, 100% - 48px); margin-inline: auto; }
+.grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.chip { display: inline-block; padding: 8px 18px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #e3c98f; border: 1px solid rgba(212,175,106,.45); background: rgba(212,175,106,.08); }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; border-radius: 14px; font-weight: 700; font-size: 15px; transition: .25s; }
+.btn-grad { background: var(--grad); color: #fff; box-shadow: 0 16px 40px rgba(124,58,237,.35); } .btn-grad:hover { transform: translateY(-2px); }
+.btn-line { border: 1px solid var(--line); background: rgba(255,255,255,.03); } .btn-line:hover { border-color: var(--gold); }
+
+.nav { height: 84px; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 18px; }
+.mark { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; font-family: "Cinzel", serif; font-weight: 600; font-size: 22px; background: var(--grad); border: 1.5px solid var(--gold); }
+
+.hero { padding: 90px 0 100px; text-align: center; }
+.hero h1 { font-size: clamp(44px, 7vw, 92px); line-height: 1.02; letter-spacing: -.03em; font-weight: 800; margin: 26px auto 24px; max-width: 980px; }
+.hero p { font-size: 19px; color: var(--muted); max-width: 620px; margin: 0 auto 38px; }
+.hero .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.trust { display: flex; justify-content: center; gap: 34px; margin-top: 46px; color: var(--muted); font-size: 14px; flex-wrap: wrap; }
+.trust b { color: var(--gold); margin-right: 6px; }
+
+section { padding: 90px 0; }
+.head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 44px; flex-wrap: wrap; }
+.head h2 { font-size: clamp(36px, 4.6vw, 58px); letter-spacing: -.02em; line-height: 1.05; margin-top: 14px; }
+.head p { color: var(--muted); max-width: 380px; }
+.work { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+.site { flex: 0 1 calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3); background: var(--card); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; transition: .3s; display: block; }
+.site:hover { transform: translateY(-6px); border-color: rgba(155,92,255,.6); box-shadow: 0 30px 60px rgba(0,0,0,.45); }
+.shot { aspect-ratio: 16 / 10.5; overflow: hidden; background: #1a1a26; position: relative; }
+.shot img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform 1.2s; }
+.site:hover .shot img { transform: scale(1.04); }
+.shot .fallback { position: absolute; inset: 0; display: grid; place-items: center; font-weight: 800; font-size: 26px; }
+.meta { padding: 20px 22px 22px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.meta b { font-size: 18px; display: block; }
+.meta span { color: var(--muted); font-size: 14px; }
+.arrow { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; flex-shrink: 0; transition: .25s; }
+.site:hover .arrow { background: var(--grad); border-color: transparent; }
+
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.step { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 34px; }
+.step .n { font-size: 44px; font-weight: 800; }
+.step h3 { font-size: 22px; margin: 10px 0 8px; }
+.step p { color: var(--muted); }
+
+.incl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.incl div { padding: 20px 22px; border-radius: 16px; background: rgba(255,255,255,.03); border: 1px solid var(--line); font-weight: 600; }
+.incl div::before { content: "✓ "; color: var(--gold); }
+
+.final { text-align: center; border-radius: 32px; padding: 80px 30px; background: linear-gradient(120deg, #2f5bff, #8b3dff); border: 2px solid var(--gold); box-shadow: 0 40px 100px rgba(124,58,237,.35); }
+.final h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1.05; letter-spacing: -.02em; margin-bottom: 16px; }
+.final p { font-size: 19px; color: #e6e3ff; margin-bottom: 34px; }
+.final .btn { background: #fff; color: #4c1d95; }
+footer { padding: 50px 0; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+@media (max-width: 900px) {
+  .steps { grid-template-columns: 1fr; } .site { flex-basis: 100%; max-width: 100%; } .incl { grid-template-columns: 1fr 1fr; }
+  .hero { padding: 50px 0 70px; } section { padding: 64px 0; } .nav .btn { display: none; }
+}
 </style>
 </head>
 <body>
-<header><div class="wrap"><div class="logo">ARYOVEN<span>.</span>STUDIO</div><span style="color:var(--muted);font-size:14px">Web design</span></div></header>
-<section class="hero"><div class="wrap">
-  <h1>Websites that turn searches into <i>WhatsApp orders.</i></h1>
-  <p class="lede">Mobile-first sites for restaurants, clinics and local services in Dubai, Istanbul and Europe. English, Persian, Arabic and Turkish.</p>
-  <p class="fa">سایت‌هایی که جستجوی گوگل را به سفارش واتس‌اپ تبدیل می‌کنند.</p>
-</div></section>
+<div class="wrap">
+  <div class="nav"><a href="#" class="brand"><span class="mark">A</span>Aryoven Web Studio</a><a href="https://instagram.com/aryovenwebstudio" class="btn btn-line">Instagram ↗</a></div>
 
-<div class="wrap grid">
-  <a class="card" href="restaurant.html">
-    <div class="shot"><iframe src="restaurant.html" title="Restaurant demo preview" loading="lazy" tabindex="-1"></iframe></div>
-    <b>Saffron House · Restaurant</b>
-    <p>Menu with an order basket that sends the full order to WhatsApp. Google rating shown first.</p>
-    <div class="tags"><span>Dubai</span><span>Ordering</span><span>Reviews</span></div>
-  </a>
-  <a class="card" href="clinic.html">
-    <div class="shot"><iframe src="clinic.html" title="Dental clinic demo preview" loading="lazy" tabindex="-1"></iframe></div>
-    <b>Nova Dental · Clinic</b>
-    <p>Dental tourism site in three languages with a booking request that arrives on WhatsApp.</p>
-    <div class="tags"><span>Istanbul</span><span>EN · FA · TR</span><span>Booking</span></div>
-  </a>
-  <a class="card" href="tyre.html">
-    <div class="shot"><iframe src="tyre.html" title="Tyre service demo preview" loading="lazy" tabindex="-1"></iframe></div>
-    <b>Gulf Tyre · Mobile service</b>
-    <p>Tyre size picker builds a price request; call-out fee and coverage areas made clear.</p>
-    <div class="tags"><span>UAE</span><span>Quote builder</span><span>Local SEO</span></div>
-  </a>
+  <div class="hero">
+    <span class="chip">Websites for local businesses</span>
+    <h1>Beautiful websites that<br><span class="grad">bring you customers.</span></h1>
+    <p>We design fast, mobile-friendly websites for bakeries, salons, cafés, restaurants, shops and trainers, so the people searching for you on Google can actually find and book you.</p>
+    <div class="cta"><a href="#work" class="btn btn-grad">See our work ↓</a><a href="https://instagram.com/aryovenwebstudio" class="btn btn-line">Get a free mockup</a></div>
+    <div class="trust"><span><b>✓</b>Free homepage mockup</span><span><b>✓</b>Live in about a week</span><span><b>✓</b>Mobile-first &amp; Google-ready</span></div>
+  </div>
 </div>
 
-<section class="how"><div class="wrap">
-  <div><b>First page free</b><p>You see your own page before paying anything. Like it, we continue.</p></div>
-  <div><b>Live in 5 days</b><p>Finished site on your domain, with Google Maps set up.</p></div>
-  <div><b>Built to bring orders</b><p>Every button leads to WhatsApp or a call, and you see how many came from the site.</p></div>
-</div></section>
-<footer><div class="wrap">All three brands above are fictional demos. To start, reply to the message you received.</div></footer>
-<script>
-function fit(){document.querySelectorAll('.shot').forEach(function(s){var f=s.querySelector('iframe');f.style.transform='scale('+(s.clientWidth/390)+')';f.style.height=(s.clientHeight/(s.clientWidth/390))+'px'})}
-addEventListener('resize',fit);fit();
-</script>
+<section id="work">
+  <div class="wrap">
+    <div class="head"><div><span class="chip">Concept work</span><h2>Ten industries.<br>Ten different personalities.</h2></div><p>Concept websites for fictional businesses, built to show what we can create for yours. Three of them are right-to-left Persian builds. Click any site to explore it live.</p></div>
+    <div class="work">
+      <a class="site" href="maison-levain/index.html"><div class="shot"><div class="fallback" style="background:#f7f1e8;color:#2b1d14">Maison Levain</div><img src="thumbs/maison-levain.jpg" alt="Maison Levain bakery website" onerror="this.remove()"></div><div class="meta"><div><b>Maison Levain</b><span>Artisan bakery · Online ordering</span></div><span class="arrow">↗</span></div></a>
+      <a class="site" href="atelier-noir/index.html"><div class="shot"><div class="fallback" style="background:#0d0d0d;color:#c8a97e">Atelier Noir</div><img src="thumbs/atelier-noir.jpg" alt="Atelier Noir hair salon website" onerror="this.remove()"></div><div class="meta"><div><b>Atelier Noir</b><span>Hair salon · Online booking</span></div><span class="arrow">↗</span></div></a>
+      <a class="site" href="bloom-cafe/index.html"><div class="shot"><div class="fallback" style="background:#2e4a3b;color:#f2c9c1">Bloom Café</div><img src="thumbs/bloom-cafe.jpg" alt="Bloom Café website" onerror="this.remove()"></div><div class="meta"><div><b>Bloom Café</b><span>Café &amp; brunch · Reservations</span></div><span class="arrow">↗</span></div></a>
+      <a class="site" href="wild-stem/index.html"><div class="shot"><div class="fallback" style="background:#f3e3dc;color:#b4585a">Wild Stem</div><img src="thumbs/wild-stem.jpg" alt="Wild Stem florist website" onerror="this.remove()"></div><div class="meta"><div><b>Wild Stem</b><span>Florist · Shop &amp; subscriptions</span></div><span class="arrow">↗</span></div></a>
+      <a class="site" href="forge-fitness/index.html"><div class="shot"><div class="fallback" style="background:#0c0d0e;color:#d4ff3a">FORGE.</div><img src="thumbs/forge-fitness.jpg" alt="Forge Fitness website" onerror="this.remove()"></div><div class="meta"><div><b>Forge Fitness</b><span>Personal trainer · Lead capture</span></div><span class="arrow">↗</span></div></a>
+      <a class="site" href="velvet-studio/index.html"><div class="shot"><div class="fallback" style="background:#efe2dc;color:#4a2f36">Velvet Studio</div><img src="thumbs/velvet-studio.jpg" alt="Velvet Studio nails and lashes website" onerror="this.remove()"></div><div class="meta"><div><b>Velvet Studio</b><span>Nails &amp; lashes · Booking flow</span></div><span class="arrow">↗</span></div></a>
+      <a class="site" href="maison-zarin/index.html"><div class="shot"><div class="fallback" style="background:#080706;color:#e8913c">Maison Zarin</div><img src="thumbs/maison-zarin.jpg" alt="Maison Zarin fine dining website" onerror="this.remove()"></div><div class="meta"><div><b>Maison Zarin</b><span>Fine dining · Table reservations</span></div><span class="arrow">↗</span></div></a>
+      <a class="site" href="sweety-cake/index.html"><div class="shot"><div class="fallback" style="background:#fdf7f4;color:#c2607a">Sweety Cake</div><img src="thumbs/sweety-cake.jpg" alt="Sweety Cake bakery website in Persian" onerror="this.remove()"></div><div class="meta"><div><b>Sweety Cake</b><span>Bakery · Cake builder · Persian RTL</span></div><span class="arrow">↗</span></div></a>
+      <a class="site" href="sarvin-beauty/index.html"><div class="shot"><div class="fallback" style="background:#fbf6f0;color:#a97a3e">Sarvin Beauty</div><img src="thumbs/sarvin-beauty.jpg" alt="Sarvin Beauty salon website in Persian" onerror="this.remove()"></div><div class="meta"><div><b>Sarvin Beauty</b><span>Beauty salon · Booking · Persian RTL</span></div><span class="arrow">↗</span></div></a>
+      <a class="site" href="haris-gallery/index.html"><div class="shot"><div class="fallback" style="background:#faf6f0;color:#c4551f">Haris Gallery</div><img src="thumbs/haris-gallery.jpg" alt="Haris Gallery handmade rug website in Persian" onerror="this.remove()"></div><div class="meta"><div><b>Haris Gallery</b><span>Handmade rugs · Catalogue · Persian RTL</span></div><span class="arrow">↗</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head"><div><span class="chip">How it works</span><h2>Simple, fast, risk-free.</h2></div></div>
+    <div class="steps">
+      <div class="step"><div class="n grad">01</div><h3>Free homepage mockup</h3><p>We design your homepage first, using your photos and brand. You see it before paying anything.</p></div>
+      <div class="step"><div class="n grad">02</div><h3>Your feedback</h3><p>Tell us what to change. Colours, text, layout: we refine it until you love it.</p></div>
+      <div class="step"><div class="n grad">03</div><h3>Launch &amp; get found</h3><p>We launch your site, connect your domain and set you up on Google, in about a week.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><div><span class="chip">Included</span><h2>Everything you need.</h2></div></div>
+    <div class="incl"><div>Mobile-first design</div><div>Online booking / ordering</div><div>Google Maps &amp; SEO setup</div><div>Contact &amp; WhatsApp buttons</div><div>Menu / price list</div><div>Photo gallery</div><div>Fast hosting setup</div><div>Easy to update</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="final">
+      <h2>Want to see your business<br>on a site like these?</h2>
+      <p>Send us a DM with the word <b>WEBSITE</b> and we'll design your homepage for free.</p>
+      <a href="https://instagram.com/aryovenwebstudio" class="btn">DM @aryovenwebstudio ↗</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><footer><span>© Aryoven Web Studio</span><span>Websites for local businesses, worldwide.</span></footer></div>
 </body>
 </html>
