@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Aryoven Studio · Website Portfolio</title>
+<meta name="description" content="Mobile-first websites for restaurants, clinics and local services in Dubai, Istanbul and Europe.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;600;700&family=Vazirmatn:wght@400;700&display=swap">
+<style>
+:root{--bg:#F5F3EF;--ink:#16161A;--muted:#6B6A70;--line:#DEDBD4;--card:#fff;--accent:#3B4BDB;
+--f-d:"Instrument Serif",Georgia,serif;--f-b:"Inter Tight",system-ui,sans-serif;--f-fa:"Vazirmatn",Tahoma,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--f-b)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:20px}
+.logo{font-weight:700;letter-spacing:.02em}.logo span{color:var(--accent)}
+.hero .wrap{padding-block:30px 46px}
+h1{font-family:var(--f-d);font-weight:400;font-size:clamp(46px,9.5vw,96px);line-height:1;margin:0;text-wrap:balance}
+h1 i{color:var(--accent)}
+.fa{font-family:var(--f-fa);direction:rtl;text-align:right;font-size:18px;color:var(--muted);margin-top:18px}
+.lede{font-size:19px;color:var(--muted);max-width:46ch;margin-top:16px}
+.grid{display:grid;gap:22px;grid-template-columns:1fr;padding-bottom:50px}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{display:grid;gap:12px;text-decoration:none;color:inherit;min-width:0}
+.shot{position:relative;aspect-ratio:9/16;max-height:520px;width:100%;max-width:100%;border-radius:22px;overflow:hidden;background:var(--card);border:1px solid var(--line);box-shadow:0 24px 50px -32px rgba(0,0,0,.45);transition:transform .25s}
+.shot iframe{position:absolute;top:0;left:0;width:390px;height:693px;border:0;transform-origin:0 0;pointer-events:none}
+.card:hover .shot{transform:translateY(-4px)}
+.card b{font-size:19px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}.tags span{font-size:12.5px;border:1px solid var(--line);border-radius:99px;padding:2px 9px;color:var(--muted)}
+.how{border-top:1px solid var(--line)}
+.how .wrap{display:grid;gap:18px;grid-template-columns:1fr;padding-block:40px}
+@media(min-width:760px){.how .wrap{grid-template-columns:repeat(3,1fr)}}
+.how b{display:block;font-family:var(--f-d);font-size:28px;font-weight:400}
+.how p{margin:4px 0 0;color:var(--muted)}
+footer .wrap{padding-block:30px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){.shot{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="logo">ARYOVEN<span>.</span>STUDIO</div><span style="color:var(--muted);font-size:14px">Web design</span></div></header>
+<section class="hero"><div class="wrap">
+  <h1>Websites that turn searches into <i>WhatsApp orders.</i></h1>
+  <p class="lede">Mobile-first sites for restaurants, clinics and local services in Dubai, Istanbul and Europe. English, Persian, Arabic and Turkish.</p>
+  <p class="fa">سایت‌هایی که جستجوی گوگل را به سفارش واتس‌اپ تبدیل می‌کنند.</p>
+</div></section>
+
+<div class="wrap grid">
+  <a class="card" href="restaurant.html">
+    <div class="shot"><iframe src="restaurant.html" title="Restaurant demo preview" loading="lazy" tabindex="-1"></iframe></div>
+    <b>Saffron House · Restaurant</b>
+    <p>Menu with an order basket that sends the full order to WhatsApp. Google rating shown first.</p>
+    <div class="tags"><span>Dubai</span><span>Ordering</span><span>Reviews</span></div>
+  </a>
+  <a class="card" href="clinic.html">
+    <div class="shot"><iframe src="clinic.html" title="Dental clinic demo preview" loading="lazy" tabindex="-1"></iframe></div>
+    <b>Nova Dental · Clinic</b>
+    <p>Dental tourism site in three languages with a booking request that arrives on WhatsApp.</p>
+    <div class="tags"><span>Istanbul</span><span>EN · FA · TR</span><span>Booking</span></div>
+  </a>
+  <a class="card" href="tyre.html">
+    <div class="shot"><iframe src="tyre.html" title="Tyre service demo preview" loading="lazy" tabindex="-1"></iframe></div>
+    <b>Gulf Tyre · Mobile service</b>
+    <p>Tyre size picker builds a price request; call-out fee and coverage areas made clear.</p>
+    <div class="tags"><span>UAE</span><span>Quote builder</span><span>Local SEO</span></div>
+  </a>
+</div>
+
+<section class="how"><div class="wrap">
+  <div><b>First page free</b><p>You see your own page before paying anything. Like it, we continue.</p></div>
+  <div><b>Live in 5 days</b><p>Finished site on your domain, with Google Maps set up.</p></div>
+  <div><b>Built to bring orders</b><p>Every button leads to WhatsApp or a call, and you see how many came from the site.</p></div>
+</div></section>
+<footer><div class="wrap">All three brands above are fictional demos. To start, reply to the message you received.</div></footer>
+<script>
+function fit(){document.querySelectorAll('.shot').forEach(function(s){var f=s.querySelector('iframe');f.style.transform='scale('+(s.clientWidth/390)+')';f.style.height=(s.clientHeight/(s.clientWidth/390))+'px'})}
+addEventListener('resize',fit);fit();
+</script>
+</body>
+</html>

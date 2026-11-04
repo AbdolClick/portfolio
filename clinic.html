@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Nova Dental · Istanbul</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Figtree:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#F3F7F7;--ink:#0F2A2E;--muted:#5C7275;--line:#D6E3E3;--card:#fff;--teal:#0E7C7B;--mint:#CDEDE8;--wa:#1FA855;
+--f-d:"DM Serif Display",Georgia,serif;--f-b:"Figtree",system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--f-b);padding-bottom:78px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+h1,h2{font-family:var(--f-d);font-weight:400;line-height:1.05;margin:0;text-wrap:balance}
+.ribbon{background:var(--ink);color:var(--mint);font-size:12.5px;text-align:center;padding:6px 0}.ribbon a{color:#fff}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:16px;gap:10px}
+.brand{font-family:var(--f-d);font-size:26px}.brand i{font-style:normal;color:var(--teal)}
+.lang{display:flex;gap:4px}.lang button{font:600 13px var(--f-b);border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:5px 9px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.hero .wrap{padding-block:26px 40px}
+.hero h1{font-size:clamp(42px,9vw,76px)}
+.hero h1 i{font-style:italic;color:var(--teal)}
+.lede{color:var(--muted);font-size:18px;max-width:44ch;margin-top:14px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.facts span{background:var(--mint);border-radius:99px;padding:5px 12px;font-size:14px;font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:12px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.btn-wa{background:var(--wa);color:#fff}.btn-t{background:var(--teal);color:#fff}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+section{padding-block:40px}
+h2{font-size:clamp(30px,6vw,42px);margin-bottom:18px}
+.tx{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:700px){.tx{grid-template-columns:repeat(2,1fr)}}
+.t{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:4px}
+.t b{font-size:18px}.t p{margin:0;color:var(--muted);font-size:14.5px}.t .from{font-weight:700;color:var(--teal)}
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:12px;counter-reset:s}
+@media(min-width:700px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;font-weight:700;margin-bottom:8px}
+form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:12px;max-width:560px}
+label{font-size:13px;font-weight:700;color:var(--muted);display:grid;gap:5px}
+select,input{font:500 16px var(--f-b);padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px max(12px,env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
+.bar .btn{min-height:46px}
+footer{padding-block:28px;text-align:center;color:var(--muted);font-size:14px}
+[dir=rtl] body,[dir=rtl] .lede{font-family:Tahoma,var(--f-b)}
+</style>
+</head>
+<body>
+<div class="ribbon">Portfolio demo · fictional clinic · <a href="./">back to portfolio</a></div>
+<header><div class="wrap"><div class="brand">Nova<i>Dental</i></div>
+<div class="lang" id="lang"><button data-l="en" aria-pressed="true">EN</button><button data-l="fa">فا</button><button data-l="tr">TR</button></div></div></header>
+<div class="hero"><div class="wrap">
+  <h1 data-i="h">A new smile <i>in 5 days.</i></h1>
+  <p class="lede" data-i="l">Implants, veneers and whitening in Nişantaşı, Istanbul. Free consultation on WhatsApp, with a treatment plan before you fly.</p>
+  <div class="facts"><span data-i="f1">Persian-speaking dentist</span><span data-i="f2">Airport pickup</span><span data-i="f3">10-year implant warranty</span></div>
+  <div class="cta"><a class="btn btn-wa" id="waTop" href="#" target="_blank" rel="noopener" data-i="c1">Free consultation</a><a class="btn btn-t" href="#book" data-i="c2">Book a visit</a></div>
+</div></div>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2 data-i="th">Treatments</h2>
+  <div class="tx">
+    <div class="t"><b>Dental implant</b><p>Swiss or Korean implant with crown, 2 visits</p><span class="from">from € 450</span></div>
+    <div class="t"><b>Porcelain veneers</b><p>E-max veneers, digital smile design included</p><span class="from">from € 180 / tooth</span></div>
+    <div class="t"><b>Zirconia crown</b><p>Natural colour, ready in 4 days</p><span class="from">from € 160 / tooth</span></div>
+    <div class="t"><b>Laser whitening</b><p>One session, up to 8 shades lighter</p><span class="from">from € 150</span></div>
+  </div>
+  <p style="color:var(--muted);font-size:13px">Sample prices for this demo.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2 data-i="hh">How it works</h2>
+  <ol class="steps"><li>Send photos of your teeth on WhatsApp</li><li>Get a written plan and price in 24 hours</li><li>Fly in, we pick you up at the airport</li><li>Treatment done in 3 to 7 days</li></ol>
+</div></section>
+
+<section id="book" style="padding-top:0"><div class="wrap">
+  <h2 data-i="bh">Book a visit</h2>
+  <form id="f">
+    <label for="tr">Treatment<select id="tr"><option>Dental implant</option><option>Porcelain veneers</option><option>Zirconia crown</option><option>Laser whitening</option><option>Not sure yet</option></select></label>
+    <div class="row"><label for="dt">Arrival date<input type="date" id="dt"></label><label for="nm">Your name<input id="nm" placeholder="Name"></label></div>
+    <a class="btn btn-wa" id="send" href="#" target="_blank" rel="noopener">Send request on WhatsApp</a>
+  </form>
+</div></section>
+<footer>Nova Dental is a fictional clinic made to show design and booking flow.</footer>
+<div class="bar"><a class="btn btn-t" href="#book">Book</a><a class="btn btn-wa" id="waBar" href="#" target="_blank" rel="noopener">WhatsApp</a></div>
+<script>
+var NUM='905000000000';
+var T={fa:{h:'لبخند تازه <i>در ۵ روز.</i>',l:'ایمپلنت، لمینت و بلیچینگ در نیشان‌تاشی استانبول. مشاوره‌ی رایگان در واتس‌اپ و طرح درمان قبل از سفر.',f1:'دندانپزشک فارسی‌زبان',f2:'ترانسفر از فرودگاه',f3:'۱۰ سال گارانتی ایمپلنت',c1:'مشاوره‌ی رایگان',c2:'رزرو نوبت',th:'خدمات',hh:'مراحل',bh:'رزرو نوبت'},
+tr:{h:'5 günde <i>yeni bir gülüş.</i>',l:'Nişantaşı, İstanbul’da implant, lamina ve beyazlatma. WhatsApp’tan ücretsiz danışma.',f1:'Farsça konuşan hekim',f2:'Havalimanı transferi',f3:'10 yıl implant garantisi',c1:'Ücretsiz danışma',c2:'Randevu al',th:'Tedaviler',hh:'Nasıl çalışır',bh:'Randevu al'}};
+var EN={};document.querySelectorAll('[data-i]').forEach(function(e){EN[e.dataset.i]=e.innerHTML});T.en=EN;
+document.getElementById('lang').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var l=b.dataset.l;
+document.querySelectorAll('[data-i]').forEach(function(x){x.innerHTML=T[l][x.dataset.i]});document.documentElement.dir=l==='fa'?'rtl':'ltr';
+[].forEach.call(this.children,function(c){c.setAttribute('aria-pressed',c===b)})});
+function wa(t){return 'https://wa.me/'+NUM+'?text='+encodeURIComponent(t)}
+document.getElementById('waTop').href=document.getElementById('waBar').href=wa('Hi Nova Dental, I would like a free consultation (from website)');
+function b(){document.getElementById('send').href=wa('Hi Nova Dental (from website)\nTreatment: '+tr.value+'\nArrival: '+(dt.value||'not set')+'\nName: '+(nm.value||'-'))}
+document.getElementById('f').addEventListener('input',b);document.getElementById('f').addEventListener('submit',function(e){e.preventDefault()});b();
+</script>
+</body>
+</html>
