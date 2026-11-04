@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="fa">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سوییتی کیک | قنادی خانگی و کیک سفارشی</title>
+<meta name="description" content="کیک تولد، عروسی، کاپ‌کیک و جعبه‌ی هدیه؛ هر روز صبح تازه پخته می‌شود. سفارش با انتخاب وزن و طعم، تحویل در محل.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap">
+<style>
+  :root {
+    --cream: #fdf7f4;
+    --cream-2: #f8e7e3;
+    --card: #ffffff;
+    --cocoa: #4a2731;
+    --cocoa-2: #7b4253;
+    --caramel: #c2607a;
+    --caramel-2: #e0889f;
+    --ink: #33212a;
+    --muted: #8a7079;
+    --line: rgba(51, 33, 42, .13);
+    --display: "Markazi Text", "Vazirmatn", Georgia, serif;
+    --body: "Vazirmatn", Tahoma, system-ui, sans-serif;
+    --shadow: 0 24px 50px -30px rgba(74, 39, 49, .38);
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+
+  body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--body); font-weight: 300; font-size: 16px; line-height: 1.85; -webkit-font-smoothing: antialiased; }
+  .page { direction: rtl; overflow-x: clip; }
+  .wrap { max-width: 1180px; margin-inline: auto; padding-inline: clamp(16px, 4.5vw, 48px); }
+  img { display: block; max-width: 100%; height: auto; }
+  .ico { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+  .strip { background: var(--cocoa); color: var(--cream); font-size: .82rem; text-align: center; padding: 8px 16px; }
+  .strip b { color: var(--caramel-2); font-weight: 500; }
+
+  /* ---------- header ---------- */
+  .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: rgba(253, 247, 244, .94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  .top__in { display: flex; align-items: center; gap: 20px; padding-block: 12px; }
+  .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--ink); }
+  .brand svg { width: 38px; height: 38px; color: var(--caramel); }
+  .brand b { display: block; font-family: var(--display); font-weight: 700; font-size: 1.45rem; line-height: 1.1; }
+  .brand span { display: block; font-size: .64rem; letter-spacing: .22em; color: var(--muted); }
+  .nav { display: flex; gap: clamp(14px, 2.4vw, 30px); margin-inline: auto; }
+  .nav a { color: var(--muted); text-decoration: none; font-size: .93rem; position: relative; padding-block: 6px; }
+  .nav a:hover { color: var(--ink); }
+  .nav a[aria-current="page"] { color: var(--ink); font-weight: 400; }
+  .nav a[aria-current="page"]::after { content: ""; position: absolute; inset-block-end: 0; inset-inline: 20%; height: 2px; background: var(--caramel); border-radius: 2px; }
+  .tools { display: flex; align-items: center; gap: 15px; font-size: 1.08rem; }
+  .tool { position: relative; background: none; border: 0; color: var(--ink); cursor: pointer; padding: 3px; line-height: 0; }
+  .tool:hover { color: var(--caramel); }
+  .dot { position: absolute; inset-block-start: -4px; inset-inline-start: -5px; min-width: 16px; height: 16px; border-radius: 999px; background: var(--caramel); color: #fff; font: 600 .64rem/16px var(--body); text-align: center; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px; border: 0; cursor: pointer; text-decoration: none;
+    padding: 14px 26px; border-radius: 999px; font: 500 .93rem/1 var(--body);
+    background: var(--cocoa-2); color: var(--cream); transition: background .2s ease, transform .2s ease;
+  }
+  .btn:hover { background: var(--caramel); transform: translateY(-2px); }
+  .btn--line { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
+  .btn--line:hover { background: var(--card); color: var(--caramel); box-shadow: inset 0 0 0 1px var(--caramel); }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--caramel); outline-offset: 3px; }
+
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--caramel); font-size: .78rem; letter-spacing: .08em; }
+  .eyebrow::before { content: ""; width: 24px; height: 1px; background: currentColor; }
+
+  /* ---------- hero ---------- */
+  .hero { background: linear-gradient(180deg, var(--cream-2), var(--cream) 78%); padding-block: clamp(28px, 4.5vw, 58px) clamp(30px, 5vw, 64px); }
+  .hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .92fr); gap: clamp(22px, 4vw, 52px); align-items: center; }
+  h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2.5rem, 7vw, 4.1rem); line-height: 1.08; margin: 16px 0 0; }
+  h1 em { font-style: normal; color: var(--caramel); }
+  .hero p.lede { margin: 18px 0 26px; color: var(--muted); max-width: 34ch; }
+  .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .perks { display: flex; gap: clamp(14px, 3vw, 34px); flex-wrap: wrap; margin-top: clamp(24px, 3.5vw, 40px); }
+  .perk { display: flex; gap: 10px; align-items: flex-start; }
+  .perk .ico { color: var(--caramel); width: 1.4em; height: 1.4em; margin-top: 5px; }
+  .perk b { display: block; font-size: .9rem; font-weight: 500; }
+  .perk span { font-size: .8rem; color: var(--muted); }
+
+  .shot { position: relative; }
+  .shot img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 240px 240px 26px 26px; box-shadow: var(--shadow); }
+  .tag {
+    position: absolute; inset-block-start: 6%; inset-inline-start: -4%; transform: rotate(-8deg);
+    background: var(--card); border: 1px dashed var(--caramel); color: var(--cocoa);
+    padding: 9px 16px; border-radius: 10px; box-shadow: var(--shadow);
+    font-family: var(--display); font-weight: 600; font-size: 1.15rem; line-height: 1.3; text-align: center;
+  }
+  .tag span { display: block; font-family: var(--body); font-weight: 300; font-size: .68rem; color: var(--muted); }
+  .chip {
+    position: absolute; inset-block-end: 7%; inset-inline-end: -3%;
+    background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 12px 16px; display: grid; gap: 2px;
+  }
+  .chip b { font-family: var(--display); font-size: 1.25rem; font-weight: 600; color: var(--caramel); }
+  .chip span { font-size: .72rem; color: var(--muted); }
+
+  /* ---------- sections ---------- */
+  section { padding-block: clamp(38px, 5.5vw, 76px); }
+  .head { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; flex-wrap: wrap; margin-bottom: clamp(20px, 3vw, 32px); }
+  h2 { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 4.6vw, 2.8rem); margin: 8px 0 0; line-height: 1.1; }
+  .head a { color: var(--caramel); text-decoration: none; font-size: .9rem; display: inline-flex; align-items: center; gap: 7px; }
+  .head a:hover { color: var(--cocoa); }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: clamp(10px, 1.6vw, 16px); }
+  .tile { background: var(--card); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); text-decoration: none; color: var(--ink); display: grid; transition: transform .25s ease; }
+  .tile:hover { transform: translateY(-5px); }
+  .tile img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+  .tile__row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 11px 13px; font-size: .9rem; }
+  .tile__row .ico { color: var(--caramel); }
+
+  .goods { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: clamp(12px, 1.8vw, 18px); }
+  .good { background: var(--card); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; min-width: 0; transition: transform .25s ease; }
+  .good:hover { transform: translateY(-5px); }
+  .good img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .good__body { padding: 14px 14px 16px; display: grid; gap: 6px; }
+  .good h3 { margin: 0; font-size: 1rem; font-weight: 500; }
+  .good p { margin: 0; font-size: .8rem; color: var(--muted); line-height: 1.7; }
+  .good__foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 6px; }
+  .toman { font-weight: 600; font-size: 1.02rem; font-variant-numeric: tabular-nums; }
+  .toman small { font-weight: 300; font-size: .74rem; color: var(--muted); }
+  .add { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; background: var(--cream-2); color: var(--cocoa-2); border: 0; transition: all .2s ease; }
+  .add:hover { background: var(--caramel); color: #fff; }
+
+  /* ---------- order ---------- */
+  .order { background: var(--cocoa); color: var(--cream); border-radius: 28px; padding: clamp(24px, 4vw, 48px); display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(22px, 4vw, 48px); align-items: center; }
+  .order h2 { color: var(--cream); }
+  .order .eyebrow { color: var(--caramel-2); }
+  .order p { color: rgba(255, 245, 248, .78); max-width: 34ch; }
+  .order ul { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 8px; font-size: .88rem; color: rgba(255, 245, 248, .8); }
+  .order li { display: flex; gap: 9px; align-items: flex-start; }
+  .order li .ico { color: var(--caramel-2); margin-top: 6px; }
+  .form { background: rgba(255, 245, 248, .08); border: 1px solid rgba(255, 245, 248, .18); border-radius: 20px; padding: clamp(18px, 2.6vw, 26px); display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; }
+  .field { display: grid; gap: 6px; min-width: 0; }
+  .field label { font-size: .76rem; color: rgba(255, 245, 248, .68); }
+  .field select, .field input {
+    width: 100%; font: 300 .95rem/1.5 var(--body); color: var(--cream);
+    background: rgba(32, 20, 13, .5); border: 1px solid rgba(251, 246, 238, .18); border-radius: 10px; padding: 11px 12px;
+  }
+  .field select option { color: #33212a; }
+  .estimate { grid-column: 1 / -1; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-top: 1px solid rgba(255, 245, 248, .18); padding-top: 14px; }
+  .estimate b { font-family: var(--display); font-size: 1.9rem; font-weight: 600; color: var(--caramel-2); font-variant-numeric: tabular-nums; }
+  .order .btn { background: var(--caramel); color: #fff6f8; }
+  .order .btn:hover { background: var(--cream); color: var(--cocoa); }
+  .note { grid-column: 1 / -1; margin: 0; font-size: .82rem; color: rgba(255, 245, 248, .68); }
+  .note[data-state="done"] { color: var(--caramel-2); }
+
+  /* ---------- story ---------- */
+  .story__grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(22px, 4vw, 50px); align-items: center; }
+  .story img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 26px; box-shadow: var(--shadow); }
+  .story p { color: var(--muted); max-width: 40ch; }
+  .points { display: grid; gap: 16px; margin-top: 22px; }
+  .point { display: flex; gap: 12px; align-items: flex-start; }
+  .point .ico { color: var(--caramel); width: 1.5em; height: 1.5em; margin-top: 5px; }
+  .point b { display: block; font-weight: 500; }
+  .point span { font-size: .86rem; color: var(--muted); }
+
+  /* ---------- reviews ---------- */
+  .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(12px, 2vw, 20px); }
+  .review { background: var(--card); border-radius: 18px; padding: 20px; box-shadow: var(--shadow); display: grid; gap: 10px; align-content: start; }
+  .stars { color: var(--caramel); letter-spacing: 2px; font-size: .9rem; }
+  .review p { margin: 0; font-size: .92rem; }
+  .review footer { display: flex; align-items: center; gap: 10px; border-top: 1px solid var(--line); padding-top: 12px; }
+  .avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--cream-2); color: var(--caramel); display: grid; place-items: center; font-weight: 600; font-size: .85rem; }
+  .review footer b { display: block; font-weight: 500; font-size: .92rem; }
+  .review footer span { font-size: .78rem; color: var(--muted); }
+
+  /* ---------- footer ---------- */
+  .foot { background: var(--cocoa); color: rgba(251, 246, 238, .78); }
+  .foot__grid { display: grid; grid-template-columns: 1.4fr .9fr 1.1fr 1.2fr; gap: clamp(20px, 3vw, 44px); padding-block: clamp(32px, 5vw, 56px); }
+  .foot .brand { color: var(--cream); }
+  .foot .brand b { color: var(--cream); }
+  .foot .brand span { color: rgba(251, 246, 238, .55); }
+  .foot h4 { font-family: var(--display); font-size: 1.15rem; font-weight: 600; color: var(--cream); margin: 0 0 14px; }
+  .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+  .foot a { color: rgba(251, 246, 238, .78); text-decoration: none; font-size: .9rem; }
+  .foot a:hover { color: var(--caramel-2); }
+  .fline { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 11px; font-size: .9rem; }
+  .fline .ico { color: var(--caramel-2); margin-top: 6px; }
+  .news { display: flex; margin-top: 12px; background: rgba(251, 246, 238, .08); border: 1px solid rgba(255, 245, 248, .18); border-radius: 999px; overflow: hidden; }
+  .news input { flex: 1 1 auto; min-width: 0; background: transparent; border: 0; color: var(--cream); padding: 11px 16px; font: 300 .88rem var(--body); }
+  .news button { border: 0; cursor: pointer; padding: 11px 18px; background: var(--caramel); color: #fff6f8; font: 500 .84rem var(--body); }
+  .news button:hover { background: var(--cream); color: var(--cocoa); }
+  .social { display: flex; gap: 9px; margin-top: 16px; }
+  .social a { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; border: 1px solid rgba(251, 246, 238, .22); color: rgba(255, 245, 248, .8); }
+  .social a:hover { border-color: var(--caramel-2); color: var(--caramel-2); }
+  .foot__bar { border-top: 1px solid rgba(255, 245, 248, .18); padding-block: 16px 26px; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; font-size: .8rem; }
+  .concept { color: var(--caramel-2); }
+
+  .toast { position: fixed; inset-block-end: calc(18px + env(safe-area-inset-bottom, 0px)); inset-inline-start: 50%; transform: translateX(50%) translateY(150%); z-index: 90; background: var(--cocoa); color: var(--cream); padding: 11px 20px; border-radius: 999px; font: 400 .88rem var(--body); box-shadow: var(--shadow); transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+  .toast[data-show="true"] { transform: translateX(50%) translateY(0); }
+
+  @media (max-width: 920px) {
+    .hero__grid, .order, .story__grid, .foot__grid { grid-template-columns: 1fr; }
+    .nav { display: none; }
+    .chip, .tag { position: static; transform: none; margin-top: 12px; display: inline-grid; }
+  }
+  @media (prefers-reduced-motion: reduce) { .btn, .tile, .good, .toast { transition: none; } }
+</style>
+
+<div class="page">
+  <div class="strip">ارسال رایگان در سطح شهر برای سفارش‌های بالای <b>۸۰۰ هزار تومان</b> · سفارش کیک تولد دو روز قبل</div>
+
+  <header class="top">
+    <div class="wrap top__in">
+      <a class="brand" href="#top">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 22h20l-2.5 16h-15L14 22Z"/><path d="M12 22c0-4 5-5 5-5M36 22c0-4-5-5-5-5"/>
+          <path d="M24 17c3 0 4-2 4-4s-2-4-4-4-4 2-4 4 1 4 4 4Z"/><path d="M24 9V5"/>
+        </svg>
+        <span><b>سوییتی کیک</b><span>تازه، هر روز صبح</span></span>
+      </a>
+      <nav class="nav">
+        <a href="#top" aria-current="page">خانه</a>
+        <a href="#cakes">کیک‌ها</a>
+        <a href="#order">سفارش کیک</a>
+        <a href="#about">درباره‌ی ما</a>
+        <a href="#contact">تماس</a>
+      </nav>
+      <div class="tools">
+        <button class="tool" type="button" aria-label="جست‌وجو"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg></button>
+        <button class="tool" type="button" id="cartBtn" aria-label="سبد خرید">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="dot" id="cartCount">۰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="top"></div>
+
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <span class="eyebrow">قنادی خانگی · از ۱۳۹۴</span>
+        <h1>برای هر بهانه‌ای،<br>یک کیک <em>تازه</em></h1>
+        <p class="lede">کیک‌ها را صبح همان روز می‌پزیم، با خامه‌ی حیوانی و میوه‌ی تازه. هیچ کیکی از دیروز نمی‌ماند.</p>
+        <div class="actions">
+          <a class="btn" href="#order">سفارش کیک تولد</a>
+          <a class="btn btn--line" href="#cakes">دیدن کیک‌ها</a>
+        </div>
+        <div class="perks">
+          <div class="perk">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M12 3c3 4 5 6.5 5 10a5 5 0 0 1-10 0c0-3.5 2-6 5-10Z"/></svg>
+            <div><b>خامه‌ی حیوانی</b><span>بدون خامه‌ی گیاهی</span></div>
+          </div>
+          <div class="perk">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9Z"/></svg>
+            <div><b>دست‌ساز</b><span>بدون پیش‌مخلوط آماده</span></div>
+          </div>
+          <div class="perk">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16v13H4z"/><path d="M4 11h16M9 7V4h6v3"/></svg>
+            <div><b>سفارشی</b><span>طرح و نوشته‌ی دلخواه</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="shot">
+        <img src="ck/hero.jpg" width="1200" height="1800" alt="کیک چندطبقه با تزیین طلایی و گل" fetchpriority="high" decoding="async">
+        <div class="tag">تازه از فر<span>هر روز ساعت ۸ صبح</span></div>
+        <div class="chip"><b>۴۸۰٬۰۰۰ تومان</b><span>کیک یک‌کیلویی، شروع قیمت</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cakes">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">دسته‌بندی</span>
+          <h2>دنبال چه می‌گردید؟</h2>
+        </div>
+        <a href="#order">همه را ببینید <svg class="ico" viewBox="0 0 24 24"><path d="M14 6l-6 6 6 6"/></svg></a>
+      </div>
+      <div class="tiles">
+        <a class="tile" href="#order"><img src="ck/c1.jpg" width="900" height="600" alt="کیک تولد" loading="lazy" decoding="async"><span class="tile__row">کیک تولد <svg class="ico" viewBox="0 0 24 24"><path d="M14 6l-6 6 6 6"/></svg></span></a>
+        <a class="tile" href="#order"><img src="ck/c2.jpg" width="900" height="1350" alt="کیک عروسی" loading="lazy" decoding="async"><span class="tile__row">کیک عروسی <svg class="ico" viewBox="0 0 24 24"><path d="M14 6l-6 6 6 6"/></svg></span></a>
+        <a class="tile" href="#order"><img src="ck/c3.jpg" width="900" height="600" alt="کیک میوه‌ای" loading="lazy" decoding="async"><span class="tile__row">کیک میوه‌ای <svg class="ico" viewBox="0 0 24 24"><path d="M14 6l-6 6 6 6"/></svg></span></a>
+        <a class="tile" href="#order"><img src="ck/c4.jpg" width="900" height="600" alt="کاپ‌کیک" loading="lazy" decoding="async"><span class="tile__row">کاپ‌کیک <svg class="ico" viewBox="0 0 24 24"><path d="M14 6l-6 6 6 6"/></svg></span></a>
+        <a class="tile" href="#order"><img src="ck/c5.jpg" width="683" height="1024" alt="جعبه‌ی هدیه" loading="lazy" decoding="async"><span class="tile__row">جعبه‌ی هدیه <svg class="ico" viewBox="0 0 24 24"><path d="M14 6l-6 6 6 6"/></svg></span></a>
+        <a class="tile" href="#order"><img src="ck/c6.jpg" width="900" height="600" alt="کیک مناسبتی" loading="lazy" decoding="async"><span class="tile__row">مناسبت‌ها <svg class="ico" viewBox="0 0 24 24"><path d="M14 6l-6 6 6 6"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">این هفته بیشترین سفارش</span>
+          <h2>پرفروش‌ها</h2>
+        </div>
+        <a href="#order">سفارش تلفنی <svg class="ico" viewBox="0 0 24 24"><path d="M14 6l-6 6 6 6"/></svg></a>
+      </div>
+      <div class="goods">
+        <article class="good">
+          <img src="ck/p1.jpg" width="900" height="678" alt="کیک توت‌فرنگی و خامه" loading="lazy" decoding="async">
+          <div class="good__body">
+            <h3>توت‌فرنگی و خامه</h3>
+            <p>اسفنجی سبک، خامه‌ی تازه و توت‌فرنگی لایه‌لایه.</p>
+            <div class="good__foot">
+              <span class="toman">۵۴۰٬۰۰۰ <small>تومان</small></span>
+              <button class="add" type="button" data-name="کیک توت‌فرنگی و خامه" aria-label="افزودن کیک توت‌فرنگی"><svg class="ico" viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></button>
+            </div>
+          </div>
+        </article>
+        <article class="good">
+          <img src="ck/p2.jpg" width="900" height="600" alt="کیک شکلاتی" loading="lazy" decoding="async">
+          <div class="good__body">
+            <h3>شکلاتی تلخ</h3>
+            <p>با شکلات ۷۰ درصد و گاناش؛ برای کسانی که شیرینی زیاد دوست ندارند.</p>
+            <div class="good__foot">
+              <span class="toman">۵۲۰٬۰۰۰ <small>تومان</small></span>
+              <button class="add" type="button" data-name="کیک شکلاتی تلخ" aria-label="افزودن کیک شکلاتی"><svg class="ico" viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></button>
+            </div>
+          </div>
+        </article>
+        <article class="good">
+          <img src="ck/p3.jpg" width="900" height="600" alt="کاپ‌کیک" loading="lazy" decoding="async">
+          <div class="good__body">
+            <h3>کاپ‌کیک (۶ عددی)</h3>
+            <p>وانیلی و شکلاتی، با فراستینگ پنیر خامه‌ای.</p>
+            <div class="good__foot">
+              <span class="toman">۳۶۰٬۰۰۰ <small>تومان</small></span>
+              <button class="add" type="button" data-name="کاپ‌کیک شش‌عددی" aria-label="افزودن کاپ‌کیک"><svg class="ico" viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></button>
+            </div>
+          </div>
+        </article>
+        <article class="good">
+          <img src="ck/p4.jpg" width="900" height="600" alt="کیک هویج و گردو" loading="lazy" decoding="async">
+          <div class="good__body">
+            <h3>هویج و گردو</h3>
+            <p>دارچین، گردوی تازه و روکش پنیر خامه‌ای.</p>
+            <div class="good__foot">
+              <span class="toman">۴۹۰٬۰۰۰ <small>تومان</small></span>
+              <button class="add" type="button" data-name="کیک هویج و گردو" aria-label="افزودن کیک هویج"><svg class="ico" viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></button>
+            </div>
+          </div>
+        </article>
+        <article class="good">
+          <img src="ck/p5.jpg" width="900" height="602" alt="کیک لایه‌ای میوه" loading="lazy" decoding="async">
+          <div class="good__body">
+            <h3>لایه‌ای میوه‌ی فصل</h3>
+            <p>هر هفته با میوه‌ی همان فصل؛ این هفته توت‌فرنگی.</p>
+            <div class="good__foot">
+              <span class="toman">۵۸۰٬۰۰۰ <small>تومان</small></span>
+              <button class="add" type="button" data-name="کیک لایه‌ای میوه" aria-label="افزودن کیک لایه‌ای"><svg class="ico" viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="order">
+    <div class="wrap">
+      <div class="order">
+        <div>
+          <span class="eyebrow">سفارش کیک</span>
+          <h2>کیک را خودتان بچینید</h2>
+          <p>وزن و طعم را انتخاب کنید تا قیمت همین‌جا حساب شود. بعدش تماس می‌گیریم و طرح را با هم نهایی می‌کنیم.</p>
+          <ul>
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg> نوشته‌ی روی کیک رایگان است</li>
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg> برای تحویل همان روز، تا ساعت ۱۰ صبح سفارش بدهید</li>
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg> کیک بدون شکر هم می‌پزیم؛ موقع تماس بگویید</li>
+          </ul>
+        </div>
+        <form class="form" id="orderForm" novalidate>
+          <div class="field">
+            <label for="occasion">مناسبت</label>
+            <select id="occasion">
+              <option>تولد</option><option>سالگرد</option><option>جشن فارغ‌التحصیلی</option>
+              <option>مهمانی</option><option>بدون مناسبت خاص</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="weight">وزن</label>
+            <select id="weight">
+              <option value="1">۱ کیلو</option>
+              <option value="1.5" selected>۱.۵ کیلو</option>
+              <option value="2">۲ کیلو</option>
+              <option value="3">۳ کیلو</option>
+              <option value="4">۴ کیلو</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="flavour">طعم</label>
+            <select id="flavour">
+              <option value="0">وانیلی</option>
+              <option value="40000" selected>شکلاتی</option>
+              <option value="60000">توت‌فرنگی و خامه</option>
+              <option value="50000">هویج و گردو</option>
+              <option value="90000">رد ولوت</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="deliver">تاریخ تحویل</label>
+            <input id="deliver" type="date">
+          </div>
+          <div class="field" style="grid-column: 1 / -1;">
+            <label for="note">نوشته‌ی روی کیک</label>
+            <input id="note" type="text" placeholder="مثلاً: تولدت مبارک مریم">
+          </div>
+          <div class="estimate">
+            <span>برآورد قیمت</span>
+            <b id="total">۰ تومان</b>
+          </div>
+          <button class="btn" type="submit" style="grid-column: 1 / -1;">ثبت درخواست سفارش</button>
+          <p class="note" id="orderNote">در این نسخه‌ی نمونه، سفارش واقعی ثبت نمی‌شود.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" id="about">
+    <div class="wrap story__grid">
+      <img src="ck/story.jpg" width="683" height="1024" alt="تزیین کیک با قیف خامه" loading="lazy" decoding="async">
+      <div>
+        <span class="eyebrow">درباره‌ی ما</span>
+        <h2>یک آشپزخانه‌ی کوچک، <em style="font-style:normal;color:var(--caramel)">یازده سال</em></h2>
+        <p>سوییتی کیک از آشپزخانه‌ی خانه شروع شد؛ اول برای تولد فامیل، بعد برای همسایه‌ها. حالا هم همان‌طور کار می‌کنیم: هر کیک را یک نفر از اول تا آخر می‌پزد و تزیین می‌کند.</p>
+        <div class="points">
+          <div class="point">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5L12 3Z"/></svg>
+            <div><b>مواد اصل</b><span>کره‌ی حیوانی، تخم‌مرغ محلی، شکلات ایرانی درجه یک</span></div>
+          </div>
+          <div class="point">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16v13H4z"/><path d="M4 11h16M9 7V4h6v3"/></svg>
+            <div><b>طرح دلخواه</b><span>عکس طرح را بفرستید، همان را می‌سازیم</span></div>
+          </div>
+          <div class="point">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9Z"/></svg>
+            <div><b>تحویل سالم</b><span>جعبه‌ی مخصوص و یخدان برای مسیرهای طولانی</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">نظر مشتری‌ها</span>
+          <h2>چه می‌گویند</h2>
+        </div>
+      </div>
+      <div class="reviews">
+        <article class="review">
+          <span class="stars">★★★★★</span>
+          <p>کیک تولد دخترم را یک روزه آماده کردند و دقیقاً شبیه عکسی بود که فرستادم. خامه‌اش هم سنگین نبود.</p>
+          <footer><span class="avatar">م</span><span><b>مریم اسدی</b><span>شهرک غرب</span></span></footer>
+        </article>
+        <article class="review">
+          <span class="stars">★★★★★</span>
+          <p>برای جلسه‌ی کاری کاپ‌کیک گرفتیم؛ سر وقت رسید و بسته‌بندی مرتبی داشت. همکارها پرسیدند از کجا گرفتی.</p>
+          <footer><span class="avatar">ک</span><span><b>کامران ر.</b><span>سفارش اداری</span></span></footer>
+        </article>
+        <article class="review">
+          <span class="stars">★★★★☆</span>
+          <p>کیک هویج‌شان واقعاً فرق دارد. یک بار سفارش دادم، حالا هر ماه می‌گیرم.</p>
+          <footer><span class="avatar">س</span><span><b>سمیرا نوری</b><span>مشتری همیشگی</span></span></footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot" id="contact">
+    <div class="wrap">
+      <div class="foot__grid">
+        <div>
+          <a class="brand" href="#top">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--caramel-2)">
+              <path d="M14 22h20l-2.5 16h-15L14 22Z"/><path d="M12 22c0-4 5-5 5-5M36 22c0-4-5-5-5-5"/>
+              <path d="M24 17c3 0 4-2 4-4s-2-4-4-4-4 2-4 4 1 4 4 4Z"/><path d="M24 9V5"/>
+            </svg>
+            <span><b>سوییتی کیک</b><span>تازه، هر روز صبح</span></span>
+          </a>
+          <p style="margin-top:14px; font-size:.9rem;">کیک خانگی، سفارشی و تازه. تحویل در محل یا تحویل حضوری از مغازه.</p>
+          <div class="social">
+            <a href="#top" aria-label="اینستاگرام"><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.4"/><circle cx="17" cy="7" r=".7" fill="currentColor"/></svg></a>
+            <a href="#top" aria-label="واتساپ"><svg class="ico" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-3.2-6.4"/><path d="M8.5 9.5c.4 3 2.9 5.5 6 6l1.3-1.8-2.2-1.2-1.1 1a7.6 7.6 0 0 1-2-2l1-1.1-1.2-2.2L8.5 9.5Z"/></svg></a>
+            <a href="#top" aria-label="تلگرام"><svg class="ico" viewBox="0 0 24 24"><path d="M21 5 3 11.5l5 1.8L19 7l-8.5 8.2.4 4.3 2.6-3 4 3L21 5Z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>صفحه‌ها</h4>
+          <ul>
+            <li><a href="#cakes">کیک‌ها</a></li>
+            <li><a href="#order">سفارش کیک</a></li>
+            <li><a href="#about">درباره‌ی ما</a></li>
+            <li><a href="#contact">تماس</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>تماس و ساعت کار</h4>
+          <div class="fline"><svg class="ico" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4Z"/></svg><span dir="ltr" style="font-variant-numeric: tabular-nums;">۰۹۱۲ ۷۴۵ ۰۳۸۲</span></div>
+          <div class="fline"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><span>خیابان شریعتی، نبش کوچه‌ی بهار، پلاک ۱۴</span></div>
+          <div class="fline"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>شنبه تا پنجشنبه ۹ تا ۲۱ · جمعه ۱۴ تا ۲۱</span></div>
+        </div>
+        <div>
+          <h4>خبر کیک‌های تازه</h4>
+          <p style="font-size:.88rem;">هر هفته طعم جدید و تخفیف‌های مناسبتی را برایتان می‌فرستیم.</p>
+          <form class="news" id="newsForm" novalidate>
+            <input id="newsPhone" type="tel" placeholder="شماره‌ی موبایل" aria-label="شماره موبایل" dir="ltr">
+            <button type="submit">عضویت</button>
+          </form>
+          <p class="note" id="newsNote" style="color: rgba(251,246,238,.6); margin-top:10px; font-size:.8rem;">شماره‌ای در این نمونه ذخیره نمی‌شود.</p>
+        </div>
+      </div>
+      <div class="foot__bar">
+        <span class="concept">سوییتی کیک یک قنادی خیالی است (سایت نمونه).</span>
+        <span>طراحی: <a href="../index.html">استودیو وب آریون</a></span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  var fa = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+  function toFa(value) { return String(value).replace(/\d/g, function (d) { return fa[Number(d)]; }); }
+  function money(value) { return toFa(value.toLocaleString('en-US')) + ' تومان'; }
+
+  var count = 0;
+  var countEl = document.getElementById('cartCount');
+  var toast = document.getElementById('toast');
+  var timer;
+  function say(text) {
+    toast.textContent = text;
+    toast.dataset.show = 'true';
+    clearTimeout(timer);
+    timer = setTimeout(function () { toast.dataset.show = 'false'; }, 2400);
+  }
+
+  document.querySelectorAll('.add').forEach(function (button) {
+    button.addEventListener('click', function () {
+      count += 1;
+      countEl.textContent = toFa(count);
+      say(button.dataset.name + ' به سبد اضافه شد');
+    });
+  });
+  document.getElementById('cartBtn').addEventListener('click', function () {
+    say(count ? toFa(count) + ' مورد در سبد شماست' : 'سبد خالی است');
+  });
+
+  var BASE_PER_KILO = 320000;
+  function price() {
+    var weight = Number(document.getElementById('weight').value);
+    var flavour = Number(document.getElementById('flavour').value);
+    var written = document.getElementById('note').value.trim() ? 0 : 0;  // writing is free
+    return Math.round((BASE_PER_KILO + flavour) * weight + written);
+  }
+  function render() { document.getElementById('total').textContent = money(price()); }
+  ['weight', 'flavour', 'occasion', 'note'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', render);
+    document.getElementById(id).addEventListener('change', render);
+  });
+  render();
+
+  document.getElementById('orderForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    var note = document.getElementById('orderNote');
+    var weight = document.getElementById('weight');
+    note.dataset.state = 'done';
+    note.textContent = 'ثبت شد: کیک ' + weight.options[weight.selectedIndex].text + ' برای ' +
+      document.getElementById('occasion').value + '، ' + money(price()) +
+      '. در سایت واقعی، سفارش به واتساپ قنادی می‌رود.';
+  });
+
+  document.getElementById('newsForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    var note = document.getElementById('newsNote');
+    var phone = document.getElementById('newsPhone').value.trim();
+    note.textContent = phone ? 'شماره در این نمونه ثبت شد.' : 'شماره‌ی موبایل را وارد کنید.';
+  });
+</script>
+
+<script>
+(function(){var t=new Date(),n=new Date(t.getTime()+864e5);function iso(d){return d.toISOString().slice(0,10)}document.querySelectorAll('input[type="date"]').forEach(function(i){i.min=iso(t);if(!i.value)i.value=iso(n);});})();
+</script>
+</html>
