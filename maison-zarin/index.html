@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Maison Zarin | Fine Dining on Jumeirah Beach Road, Dubai</title>
+<meta name="description" content="A seven-course seasonal menu cooked to order in an open kitchen. Dinner Tuesday to Sunday, counter and table seating.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@200;300;400;500;600;700&display=swap">
+<style>
+  :root {
+    --black: #080706;
+    --panel: #121010;
+    --panel-2: #1a1613;
+    --amber: #e8913c;
+    --amber-2: #f3b267;
+    --white: #f6f3ef;
+    --grey: #9a938c;
+    --line: rgba(246, 243, 239, .09);
+    --line-amber: rgba(232, 145, 60, .45);
+    --script: "Great Vibes", cursive;
+    --sans: "Outfit", system-ui, sans-serif;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0; background: var(--black); color: var(--white);
+    font-family: var(--sans); font-weight: 300; font-size: 16px; line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1200px; margin-inline: auto; padding-inline: clamp(18px, 4.5vw, 54px); }
+  img { display: block; max-width: 100%; height: auto; }
+  .ico { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  .amber { color: var(--amber); }
+
+  /* ---------- header ---------- */
+  .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 60; background: rgba(8, 7, 6, .9); backdrop-filter: blur(14px); }
+  .top__in { display: flex; align-items: center; gap: 22px; padding-block: 16px; }
+  .logo { font-family: var(--script); font-size: 1.9rem; line-height: 1.05; color: var(--white); text-decoration: none; }
+  .logo span { display: block; margin-inline-start: 22px; }
+  .nav { display: flex; gap: clamp(16px, 2.6vw, 38px); margin-inline: auto; }
+  .nav a {
+    color: var(--grey); text-decoration: none; font-size: .82rem; letter-spacing: .14em;
+    text-transform: uppercase; padding-block: 8px; position: relative;
+  }
+  .nav a:hover { color: var(--white); }
+  .nav a[aria-current="page"] { color: var(--white); }
+  .nav a[aria-current="page"]::after {
+    content: ""; position: absolute; inset-block-end: 0; inset-inline: 10%; height: 2px; background: var(--amber);
+  }
+  .tools { display: flex; align-items: center; gap: 18px; font-size: 1.1rem; }
+  .tool { position: relative; background: none; border: 0; color: var(--white); cursor: pointer; padding: 2px; line-height: 0; }
+  .tool:hover { color: var(--amber); }
+  .dot {
+    position: absolute; inset-block-start: -4px; inset-inline-end: -5px; min-width: 15px; height: 15px; border-radius: 999px;
+    background: var(--amber); color: #170d03; font: 600 .62rem/15px var(--sans); text-align: center;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; border: 0; cursor: pointer; text-decoration: none;
+    padding: 14px 26px; border-radius: 6px; font: 500 .78rem/1 var(--sans); letter-spacing: .14em; text-transform: uppercase;
+    background: linear-gradient(135deg, #a9682a, #e8913c); color: #150c03;
+    box-shadow: inset 0 0 0 1px rgba(246, 243, 239, .14);
+    transition: transform .2s ease, filter .2s ease;
+  }
+  .btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+  .btn--line { background: transparent; color: var(--white); box-shadow: inset 0 0 0 1px var(--line); }
+  .btn--line:hover { box-shadow: inset 0 0 0 1px var(--line-amber); color: var(--amber-2); }
+  a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px; color: var(--amber);
+    font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; font-weight: 400;
+  }
+  .eyebrow::before { content: ""; width: 26px; height: 1px; background: currentColor; }
+  .eyebrow--both::after { content: ""; width: 26px; height: 1px; background: currentColor; }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; padding-block: clamp(34px, 5vw, 66px) clamp(30px, 4vw, 56px); }
+  .hero__grid { display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr); gap: clamp(24px, 4vw, 54px); align-items: center; }
+  h1 {
+    font-weight: 500; font-size: clamp(2.7rem, 7.6vw, 4.6rem); line-height: 1.08; margin: 18px 0 0;
+    letter-spacing: -.02em; text-wrap: balance;
+  }
+  .hero__rule { display: flex; align-items: center; gap: 10px; margin: 26px 0 22px; }
+  .hero__rule i { height: 1px; width: min(300px, 55%); background: linear-gradient(90deg, var(--line-amber), transparent); }
+  .hero__rule .ico { color: var(--amber); width: 1.2em; height: 1.2em; }
+  .hero p.lede { margin: 0 0 28px; color: var(--grey); max-width: 34ch; font-size: .98rem; }
+  .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .features { display: flex; gap: clamp(16px, 3vw, 40px); flex-wrap: wrap; margin-top: clamp(28px, 4vw, 52px); }
+  .feature { display: flex; gap: 12px; padding-inline-start: clamp(16px, 3vw, 40px); border-inline-start: 1px solid var(--line); }
+  .feature:first-child { padding-inline-start: 0; border: 0; }
+  .feature .ico { color: var(--amber); width: 1.5em; height: 1.5em; margin-top: 4px; }
+  .feature b { display: block; font-size: .74rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--amber); }
+  .feature span { font-size: .84rem; color: var(--grey); }
+
+  .plate { position: relative; display: grid; place-items: center; min-height: 320px; }
+  .plate__glow {
+    position: absolute; width: 94%; aspect-ratio: 1; border-radius: 50%;
+    background: radial-gradient(circle, rgba(232, 145, 60, .26), rgba(232, 145, 60, .05) 52%, transparent 68%); filter: blur(18px);
+  }
+  .plate__shot {
+    position: relative; width: min(430px, 84%); aspect-ratio: 1; border-radius: 50%; overflow: hidden;
+    box-shadow: 0 46px 90px -34px #000, 0 0 0 1px rgba(232, 145, 60, .18);
+  }
+  .plate__shot img { width: 100%; height: 100%; object-fit: cover; object-position: 48% 42%; transform: scale(1.2); }
+  .speck { position: absolute; border-radius: 50%; background: var(--amber); opacity: .5; }
+  .badge { position: absolute; inset-block-end: 2%; inset-inline-end: 0; width: clamp(96px, 12vw, 130px); aspect-ratio: 1; }
+  .badge svg { width: 100%; height: 100%; animation: turn 44s linear infinite; }
+  .badge text { font-family: var(--sans); font-size: 8px; letter-spacing: 2.2px; fill: var(--amber); }
+  .badge__mid { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; line-height: 1.25; }
+  .badge__mid b { font-family: var(--script); font-size: 1.1rem; font-weight: 400; color: var(--white); }
+  .badge__mid span { font-size: .5rem; letter-spacing: .22em; color: var(--grey); text-transform: uppercase; }
+  @keyframes turn { to { transform: rotate(360deg); } }
+
+  /* ---------- sections ---------- */
+  section { padding-block: clamp(46px, 6.5vw, 92px); }
+  .head { text-align: center; display: grid; justify-items: center; gap: 12px; margin-bottom: clamp(28px, 4vw, 46px); }
+  h2 { font-weight: 600; font-size: clamp(1.9rem, 4.6vw, 2.9rem); margin: 0; letter-spacing: -.02em; }
+  .head p { margin: 0; color: var(--grey); max-width: 52ch; font-size: .93rem; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: clamp(14px, 2vw, 22px); }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+    display: flex; flex-direction: column; min-width: 0; transition: transform .3s ease, border-color .3s ease;
+  }
+  .card:hover { transform: translateY(-5px); border-color: var(--line-amber); }
+  .card__shot { aspect-ratio: 16 / 11; overflow: hidden; }
+  .card__shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.8,.2,1); }
+  .card:hover .card__shot img { transform: scale(1.06); }
+  .card__body { padding: 16px 16px 18px; display: grid; gap: 8px; }
+  .card h3 { margin: 0; font-size: 1.02rem; font-weight: 500; color: var(--amber); }
+  .card p { margin: 0; font-size: .82rem; color: var(--grey); line-height: 1.65; }
+  .card__foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 6px; }
+  .card__price { font-size: 1.35rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+  .bag {
+    width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; cursor: pointer;
+    background: transparent; color: var(--amber); border: 1px solid var(--line-amber); transition: all .2s ease;
+  }
+  .bag:hover { background: var(--amber); color: #150c03; }
+  .center { display: flex; justify-content: center; margin-top: clamp(24px, 3vw, 40px); }
+
+  /* ---------- story ---------- */
+  .story__grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(26px, 4vw, 58px); align-items: center; }
+  .story h2 { text-align: start; margin-bottom: 16px; }
+  .story p { color: var(--grey); max-width: 42ch; font-size: .95rem; }
+  .sign { font-family: var(--script); font-size: 2rem; color: var(--amber); margin-top: 12px; }
+  .stats { display: flex; gap: clamp(18px, 3vw, 40px); flex-wrap: wrap; margin-top: 26px; }
+  .stat { padding-inline-start: clamp(18px, 3vw, 40px); border-inline-start: 1px solid var(--line); }
+  .stat:first-child { padding-inline-start: 0; border: 0; }
+  .stat b { display: block; font-size: clamp(1.5rem, 3.2vw, 2rem); font-weight: 500; color: var(--amber); line-height: 1.3; }
+  .stat span { font-size: .82rem; color: var(--grey); }
+  .collage { display: grid; grid-template-columns: 1.6fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; }
+  .collage figure { margin: 0; border-radius: 12px; overflow: hidden; background: var(--panel); }
+  .collage img { width: 100%; height: 100%; object-fit: cover; }
+  .collage figure:first-child { grid-row: span 2; }
+  .collage figure:first-child img { aspect-ratio: 4 / 5; }
+  .collage figure:not(:first-child) img { aspect-ratio: 16 / 11; }
+
+  /* ---------- guests ---------- */
+  .guests__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 28px; }
+  .guests__head h2 { text-align: start; }
+  .rating { display: grid; gap: 4px; justify-items: start; }
+  .rating__row { display: flex; align-items: center; gap: 12px; }
+  .faces { display: flex; }
+  .face {
+    width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; margin-inline-start: -9px;
+    background: var(--panel-2); border: 2px solid var(--black); color: var(--amber); font: 500 .78rem/1 var(--sans);
+  }
+  .face:first-child { margin-inline-start: 0; }
+  .stars { color: var(--amber); letter-spacing: 2px; font-size: .9rem; }
+  .rating b { font-size: 1.15rem; font-weight: 500; }
+  .rating span { font-size: .84rem; color: var(--grey); }
+
+  .rail { position: relative; }
+  .quotes { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(250px, 1fr); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; scrollbar-width: none; }
+  .quotes::-webkit-scrollbar { display: none; }
+  .quote {
+    scroll-snap-align: start; background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+    padding: 20px; display: grid; gap: 12px; align-content: start; min-width: 0;
+  }
+  .quote--lift { background: var(--panel-2); transform: translateY(-10px); }
+  .quote__top { display: flex; align-items: center; gap: 10px; }
+  .quote__mark { margin-inline-start: auto; font-family: Georgia, serif; font-size: 2.4rem; line-height: .5; color: var(--amber); opacity: .5; }
+  .quote p { margin: 0; font-size: .9rem; color: var(--white); opacity: .9; }
+  .quote footer { border-top: 1px solid var(--line); padding-top: 10px; }
+  .quote footer b { display: block; color: var(--amber); font-weight: 500; font-size: .92rem; }
+  .quote footer span { font-size: .8rem; color: var(--grey); }
+  .arrows { display: flex; justify-content: center; gap: 10px; margin-top: 20px; align-items: center; }
+  .arrow {
+    width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: transparent;
+    color: var(--grey); cursor: pointer; display: grid; place-items: center;
+  }
+  .arrow:hover { border-color: var(--line-amber); color: var(--amber); }
+  .dots { display: flex; gap: 7px; }
+  .dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--line); }
+  .dots i[data-on="true"] { background: var(--amber); }
+
+  /* ---------- footer ---------- */
+  .foot { border-top: 1px solid var(--line); }
+  .foot__grid { display: grid; grid-template-columns: 1.4fr .8fr 1.2fr 1.1fr; gap: clamp(22px, 3.5vw, 46px); padding-block: clamp(36px, 5vw, 62px); }
+  .foot h4 { font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: var(--white); margin: 0 0 18px; font-weight: 500; }
+  .foot p, .foot a, .foot li, .fline { color: var(--grey); font-size: .86rem; }
+  .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .foot a { text-decoration: none; }
+  .foot a:hover { color: var(--amber); }
+  .social { display: flex; gap: 9px; margin-top: 18px; }
+  .social a { width: 33px; height: 33px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line); color: var(--grey); }
+  .social a:hover { border-color: var(--line-amber); color: var(--amber); }
+  .fline { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
+  .fline .ico { color: var(--amber); margin-top: 6px; }
+  .news { display: flex; margin-top: 14px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .news input { flex: 1 1 auto; min-width: 0; background: var(--panel); border: 0; color: var(--white); padding: 12px 13px; font: 300 .86rem var(--sans); }
+  .news button { border: 0; cursor: pointer; padding: 12px 16px; background: var(--amber); color: #150c03; font: 500 .74rem var(--sans); letter-spacing: .12em; text-transform: uppercase; }
+  .news button:hover { background: var(--amber-2); }
+  .news-note { font-size: .8rem; color: var(--grey); margin: 10px 0 0; }
+  .news-note[data-state="done"] { color: var(--amber); }
+  .foot__bar { border-top: 1px solid var(--line); padding-block: 16px 28px; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; font-size: .78rem; color: var(--grey); }
+  .foot__bar a { color: var(--grey); text-decoration: none; }
+  .foot__bar a:hover { color: var(--amber); }
+  .concept { color: var(--amber); }
+
+  .toast {
+    position: fixed; inset-block-end: calc(18px + env(safe-area-inset-bottom, 0px)); inset-inline-start: 50%;
+    transform: translateX(-50%) translateY(150%); z-index: 90; background: var(--amber); color: #150c03;
+    padding: 11px 20px; border-radius: 999px; font: 500 .85rem var(--sans); transition: transform .35s cubic-bezier(.2,.8,.2,1);
+  }
+  .toast[data-show="true"] { transform: translateX(-50%) translateY(0); }
+
+  @media (max-width: 980px) {
+    .hero__grid, .story__grid, .foot__grid { grid-template-columns: 1fr; }
+    .nav { display: none; }
+    .quote--lift { transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .btn, .card, .card__shot img, .toast { transition: none; } .badge svg { animation: none; } }
+</style>
+
+<div id="top">
+  <header class="top">
+    <div class="wrap top__in">
+      <a class="logo" href="#top">Maison <span>Zarin</span></a>
+      <nav class="nav">
+        <a href="#top" aria-current="page">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#story">Our Story</a>
+        <a href="#guests">Guests</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="tools">
+        <button class="tool" type="button" aria-label="Search">
+          <svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+        </button>
+        <button class="tool" type="button" id="cartBtn" aria-label="Your order">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="dot" id="cartCount">0</span>
+        </button>
+        <button class="tool" type="button" aria-label="Account">
+          <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.2-3.6 4-5.2 7-5.2s5.8 1.6 7 5.2"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero wrap">
+    <div class="hero__grid">
+      <div>
+        <span class="eyebrow">Exceptional Cuisine</span>
+        <h1>One Menu,<br>Seven <span class="amber">Courses</span></h1>
+        <div class="hero__rule">
+          <i></i>
+          <svg class="ico" viewBox="0 0 24 24"><path d="M12 4c3 4 5 6.5 5 10a5 5 0 0 1-10 0c0-3.5 2-6 5-10Z"/><path d="M12 9v9"/></svg>
+        </div>
+        <p class="lede">A seven-course seasonal menu, cooked to order in an open kitchen on Jumeirah Beach Road.</p>
+        <div class="actions">
+          <a class="btn" href="#menu">Order Now
+            <svg class="ico" viewBox="0 0 24 24"><path d="M10 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--line" href="#contact">Reserve Table
+            <svg class="ico" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>
+          </a>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M12 4c3 4 5 6.5 5 10a5 5 0 0 1-10 0c0-3.5 2-6 5-10Z"/></svg>
+            <div><b>Fresh Ingredients</b><span>Sourced daily</span></div>
+          </div>
+          <div class="feature">
+            <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5"/></svg>
+            <div><b>Counter Seating</b><span>Eighteen a night</span></div>
+          </div>
+          <div class="feature">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M7 20h10M6 10a3 3 0 1 1 3-4 3.2 3.2 0 0 1 6 0 3 3 0 1 1 3 4v6H6v-6Z"/></svg>
+            <div><b>Open Kitchen</b><span>Four chefs at the pass</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="plate">
+        <span class="plate__glow" aria-hidden="true"></span>
+        <span class="speck" style="width:7px;height:7px;top:14%;left:10%;" aria-hidden="true"></span>
+        <span class="speck" style="width:4px;height:4px;top:28%;left:4%;opacity:.35;" aria-hidden="true"></span>
+        <span class="speck" style="width:5px;height:5px;bottom:20%;right:8%;opacity:.4;" aria-hidden="true"></span>
+        <span class="speck" style="width:9px;height:9px;top:8%;right:18%;opacity:.3;" aria-hidden="true"></span>
+        <div class="plate__shot">
+          <img src="img/plate.jpg" width="1024" height="683" alt="Chef's seasonal plate, seen from above" fetchpriority="high" decoding="async">
+        </div>
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs><path id="ring" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs>
+            <circle cx="60" cy="60" r="56" fill="rgba(8,7,6,.86)" stroke="rgba(232,145,60,.5)"/>
+            <circle cx="60" cy="60" r="36" fill="none" stroke="rgba(232,145,60,.25)"/>
+            <text><textPath href="#ring" startOffset="2%">EST. 2024 · MAISON ZARIN · DUBAI ·</textPath></text>
+          </svg>
+          <div class="badge__mid"><b>Zarin</b><span>Premium</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow eyebrow--both">Chef's Favorites</span>
+        <h2>Signature <span class="amber">Collection</span></h2>
+        <p>Handpicked plates from this season's menu, cooked to order and finished at the pass by the chef.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card__shot"><img src="img/beef.jpg" width="960" height="640" alt="Aged beef fillet with asparagus" loading="lazy" decoding="async"></div>
+          <div class="card__body">
+            <h3>Aged Beef Fillet</h3>
+            <p>28-day aged fillet, demi-glace, asparagus and butter potatoes.</p>
+            <div class="card__foot">
+              <span class="card__price">$185</span>
+              <button class="bag" type="button" data-name="Aged Beef Fillet" aria-label="Add Aged Beef Fillet">
+                <svg class="ico" viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__shot"><img src="img/prawn.jpg" width="1024" height="683" alt="Kataifi prawns with cucumber" loading="lazy" decoding="async"></div>
+          <div class="card__body">
+            <h3>Kataifi Prawns</h3>
+            <p>Tiger prawns in crisp kataifi, coriander emulsion, pickled cucumber.</p>
+            <div class="card__foot">
+              <span class="card__price">$96</span>
+              <button class="bag" type="button" data-name="Kataifi Prawns" aria-label="Add Kataifi Prawns">
+                <svg class="ico" viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__shot"><img src="img/chicken.jpg" width="1024" height="768" alt="Corn-fed chicken with risotto" loading="lazy" decoding="async"></div>
+          <div class="card__body">
+            <h3>Corn-Fed Chicken</h3>
+            <p>Pan-roasted breast, artichoke, herb oil and parmesan risotto.</p>
+            <div class="card__foot">
+              <span class="card__price">$124</span>
+              <button class="bag" type="button" data-name="Corn-Fed Chicken" aria-label="Add Corn-Fed Chicken">
+                <svg class="ico" viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__shot"><img src="img/citrus.jpg" width="1536" height="2048" alt="Citrus and saffron tart" loading="lazy" decoding="async"></div>
+          <div class="card__body">
+            <h3>Citrus &amp; Saffron</h3>
+            <p>Citrus tart, saffron cream and gold leaf. Light, barely sweet.</p>
+            <div class="card__foot">
+              <span class="card__price">$68</span>
+              <button class="bag" type="button" data-name="Citrus & Saffron" aria-label="Add Citrus and Saffron">
+                <svg class="ico" viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="center">
+        <a class="btn btn--line" href="#contact">View Full Menu
+          <svg class="ico" viewBox="0 0 24 24"><path d="M10 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="wrap story__grid">
+      <div>
+        <span class="eyebrow">Our Story</span>
+        <h2>Nothing Made <span class="amber">in Advance</span></h2>
+        <p>Maison Zarin began as a four-seat counter and kept the habit: nothing is prepared in advance, and every plate is checked at the pass before it leaves the kitchen. The menu changes with the season, never with the trend.</p>
+        <div class="sign">Maison Zarin</div>
+        <div class="stats">
+          <div class="stat"><b>7</b><span>Courses each season</span></div>
+          <div class="stat"><b>4</b><span>Menus a year</span></div>
+          <div class="stat"><b>2024</b><span>Open since</span></div>
+        </div>
+      </div>
+      <div class="collage">
+        <figure><img src="img/chef2.jpg" width="1024" height="683" alt="Chef finishing a plate" loading="lazy" decoding="async"></figure>
+        <figure><img src="img/room.jpg" width="1300" height="975" alt="The dining room" loading="lazy" decoding="async"></figure>
+        <figure><img src="img/prawn.jpg" width="1024" height="683" alt="A finished starter" loading="lazy" decoding="async"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="guests">
+    <div class="wrap">
+      <div class="guests__head">
+        <div>
+          <span class="eyebrow">Guest Book</span>
+          <h2>Four Recent <span class="amber">Tables</span></h2>
+        </div>
+        <div class="rating">
+          <div class="rating__row">
+            <div class="faces" aria-hidden="true">
+              <span class="face">R</span><span class="face">M</span><span class="face">S</span><span class="face">A</span>
+            </div>
+            <span class="stars">★★★★★</span>
+            <b>4.9</b>
+          </div>
+          <span>From 2,500+ diners</span>
+        </div>
+      </div>
+
+      <div class="rail">
+        <div class="quotes" id="quotes">
+          <article class="quote">
+            <div class="quote__top"><span class="face">R</span><span class="stars">★★★★★</span><span class="quote__mark">”</span></div>
+            <p>The tasting menu was exceptional, the room is calm, and every plate arrived exactly as described.</p>
+            <footer><b>Rana M.</b><span>Food writer</span></footer>
+          </article>
+          <article class="quote quote--lift">
+            <div class="quote__top"><span class="face">M</span><span class="stars">★★★★★</span><span class="quote__mark">”</span></div>
+            <p>One of the best dinners we have had in Dubai. Beautiful presentation and service that never interrupts.</p>
+            <footer><b>Mehrdad Kharrazi</b><span>Entrepreneur</span></footer>
+          </article>
+          <article class="quote">
+            <div class="quote__top"><span class="face">S</span><span class="stars">★★★★★</span><span class="quote__mark">”</span></div>
+            <p>The citrus dessert alone is worth the trip. Light, precise, and not too sweet.</p>
+            <footer><b>Sara</b><span>Travel editor</span></footer>
+          </article>
+          <article class="quote">
+            <div class="quote__top"><span class="face">A</span><span class="stars">★★★★★</span><span class="quote__mark">”</span></div>
+            <p>Booked for a client dinner and it carried the whole evening. Quiet, warm, and faultless timing.</p>
+            <footer><b>A. Tehrani</b><span>Consultant</span></footer>
+          </article>
+        </div>
+        <div class="arrows">
+          <button class="arrow" type="button" id="prev" aria-label="Previous"><svg class="ico" viewBox="0 0 24 24"><path d="M14 6l-6 6 6 6"/></svg></button>
+          <div class="dots" id="dots" aria-hidden="true"><i data-on="true"></i><i></i><i></i><i></i></div>
+          <button class="arrow" type="button" id="next" aria-label="Next"><svg class="ico" viewBox="0 0 24 24"><path d="M10 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot" id="contact">
+    <div class="wrap">
+      <div class="foot__grid">
+        <div>
+          <a class="logo" href="#top">Maison <span>Zarin</span></a>
+          <p style="margin-top:14px;">Seasonal fine dining on Jumeirah Beach Road. Dinner only, Tuesday to Sunday.</p>
+          <div class="social">
+            <a href="#top" aria-label="Instagram"><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.4"/><circle cx="17" cy="7" r=".7" fill="currentColor"/></svg></a>
+            <a href="#top" aria-label="WhatsApp"><svg class="ico" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-3.2-6.4"/><path d="M8.5 9.5c.4 3 2.9 5.5 6 6l1.3-1.8-2.2-1.2-1.1 1a7.6 7.6 0 0 1-2-2l1-1.1-1.2-2.2L8.5 9.5Z"/></svg></a>
+            <a href="#top" aria-label="Telegram"><svg class="ico" viewBox="0 0 24 24"><path d="M21 5 3 11.5l5 1.8L19 7l-8.5 8.2.4 4.3 2.6-3 4 3L21 5Z"/></svg></a>
+            <a href="#top" aria-label="TripAdvisor"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="9" cy="12" r="2"/><circle cx="15" cy="12" r="2"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#guests">Guests</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <div class="fline">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <span>Jumeirah Beach Road, near Mercato Mall, Dubai</span>
+          </div>
+          <div class="fline">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4Z"/></svg>
+            <span style="font-variant-numeric: tabular-nums;">+971 4 399 0147</span>
+          </div>
+          <div class="fline">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+            <span>table@maisonzarin.ae</span>
+          </div>
+          <div class="fline">
+            <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+            <span>Tue – Sun: 7:00 PM – 11:30 PM</span>
+          </div>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p>Next season's menu, one week before it opens.</p>
+          <form class="news" id="newsForm" novalidate>
+            <input id="newsEmail" type="email" placeholder="Enter your email" autocomplete="email" aria-label="Email">
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="news-note" id="newsNote">Nothing is sent or stored in this sample.</p>
+        </div>
+      </div>
+      <div class="foot__bar">
+        <span class="concept">Maison Zarin is a fictional restaurant (concept site).</span>
+        <span>Designed by <a href="../index.html">Aryoven Web Studio</a></span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  var count = 0;
+  var countEl = document.getElementById('cartCount');
+  var toast = document.getElementById('toast');
+  var timer;
+
+  function say(text) {
+    toast.textContent = text;
+    toast.dataset.show = 'true';
+    clearTimeout(timer);
+    timer = setTimeout(function () { toast.dataset.show = 'false'; }, 2200);
+  }
+
+  document.querySelectorAll('.bag').forEach(function (button) {
+    button.addEventListener('click', function () {
+      count += 1;
+      countEl.textContent = String(count);
+      say(button.dataset.name + ' added to your order');
+    });
+  });
+
+  document.getElementById('cartBtn').addEventListener('click', function () {
+    say(count ? count + ' dish(es) in your order' : 'Your order is empty');
+  });
+
+  document.getElementById('newsForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    var note = document.getElementById('newsNote');
+    var email = document.getElementById('newsEmail').value.trim();
+    note.dataset.state = 'done';
+    note.textContent = email ? 'Noted in this sample: ' + email : 'Please enter an email.';
+  });
+
+  (function carousel() {
+    var rail = document.getElementById('quotes');
+    var dots = Array.prototype.slice.call(document.querySelectorAll('#dots i'));
+    function step(direction) {
+      var card = rail.querySelector('.quote');
+      var width = card ? card.getBoundingClientRect().width + 16 : 280;
+      rail.scrollBy({ left: direction * width, behavior: 'smooth' });
+    }
+    document.getElementById('next').addEventListener('click', function () { step(1); });
+    document.getElementById('prev').addEventListener('click', function () { step(-1); });
+    rail.addEventListener('scroll', function () {
+      var card = rail.querySelector('.quote');
+      var width = card ? card.getBoundingClientRect().width + 16 : 280;
+      var index = Math.round(rail.scrollLeft / width);
+      dots.forEach(function (dot, i) {
+        if (i === index) { dot.dataset.on = 'true'; } else { delete dot.dataset.on; }
+      });
+    }, { passive: true });
+  })();
+</script>
+
+</html>

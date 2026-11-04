@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Atelier Noir | Hair Salon, Marylebone</title>
+<meta name="description" content="Precision cuts, lived-in colour and balayage. Book your appointment online in 30 seconds.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #0d0d0d; --bg2: #151515; --ink: #f3eee6; --muted: #9b958c; --gold: #c8a97e; --line: #2a2a2a;
+  --display: "Italiana", serif; --serif: "Playfair Display", Georgia, serif; --sans: "Manrope", system-ui, sans-serif; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; color: transparent; background: linear-gradient(160deg, #3a2f25, #121212); }
+a { color: inherit; text-decoration: none; }
+.wrap { width: min(1240px, 100% - 48px); margin-inline: auto; }
+.eyebrow { font-size: 11px; letter-spacing: .38em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+h1, h2 { font-family: var(--serif); font-weight: 400; line-height: 1.05; }
+.btn { display: inline-block; padding: 17px 34px; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; font-weight: 600; transition: .3s; cursor: pointer; font-family: var(--sans); border: 0; }
+.btn-gold { background: var(--gold); color: #111; } .btn-gold:hover { background: var(--ink); }
+.btn-ghost { border: 1px solid rgba(243,238,230,.4); color: var(--ink); background: transparent; } .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+header { position: fixed; inset: 0 0 auto; z-index: 50; transition: .3s; }
+header.solid { background: rgba(13,13,13,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 88px; }
+.logo { font-family: var(--display); font-size: 30px; letter-spacing: .32em; }
+.links { display: flex; gap: 40px; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; }
+.links a:hover { color: var(--gold); }
+.burger { display: none; background: none; border: 0; color: var(--ink); font-size: 26px; cursor: pointer; }
+
+.hero { height: 100vh; min-height: 680px; position: relative; display: flex; align-items: end; padding-bottom: 110px; }
+.hero > img { position: absolute; inset: 0; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13,13,13,.92) 0%, rgba(13,13,13,.55) 55%, rgba(13,13,13,.2)), linear-gradient(0deg, var(--bg), transparent 40%); z-index: 1; }
+.hero .wrap { position: relative; z-index: 2; }
+.hero h1 { font-size: clamp(56px, 8.4vw, 132px); margin: 22px 0 26px; }
+.hero h1 i { color: var(--gold); }
+.hero p { max-width: 460px; color: #c9c3ba; font-size: 18px; margin-bottom: 40px; }
+.hero .cta { display: flex; gap: 16px; flex-wrap: wrap; }
+.scroll { position: absolute; right: 48px; bottom: 110px; z-index: 2; writing-mode: vertical-rl; font-size: 11px; letter-spacing: .4em; color: var(--muted); }
+
+section { padding: 130px 0; }
+.intro { display: grid; grid-template-columns: 1fr 1.3fr; gap: 90px; align-items: center; }
+.intro h2 { font-size: clamp(38px, 4.4vw, 60px); margin-top: 18px; }
+.intro p { color: var(--muted); font-size: 17px; margin-bottom: 20px; }
+.awards { display: flex; gap: 40px; margin-top: 36px; padding-top: 30px; border-top: 1px solid var(--line); }
+.awards b { font-family: var(--serif); font-size: 42px; font-weight: 400; color: var(--gold); display: block; line-height: 1; }
+.awards span { font-size: 12px; color: var(--muted); letter-spacing: .1em; }
+
+.services { background: var(--bg2); }
+.svc-head { display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 30px; margin-bottom: 60px; }
+.svc-head h2 { font-size: clamp(40px, 5vw, 68px); margin-top: 16px; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.cat { font-family: var(--serif); font-style: italic; font-size: 28px; color: var(--gold); margin-bottom: 18px; }
+.svc { display: flex; align-items: baseline; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.svc .n { font-size: 17px; font-weight: 400; }
+.svc small { display: block; color: var(--muted); font-size: 13px; }
+.svc .dots { flex: 1; border-bottom: 1px dotted #444; transform: translateY(-5px); }
+.svc .p { font-family: var(--serif); font-size: 20px; }
+
+.gallery { display: grid; grid-template-columns: 1.3fr 1fr 1fr; grid-template-rows: 300px 300px; gap: 16px; }
+.gallery div { overflow: hidden; }
+.gallery div:first-child { grid-row: span 2; }
+.gallery img { transition: transform 1.2s; } .gallery div:hover img { transform: scale(1.06); }
+
+.team { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 60px; }
+.member .pic { height: 440px; overflow: hidden; filter: grayscale(1); transition: .5s; }
+.member:hover .pic { filter: none; }
+.member h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; margin-top: 20px; }
+.member span { color: var(--gold); font-size: 12px; letter-spacing: .24em; text-transform: uppercase; }
+
+.book { background: var(--bg2); }
+.book .grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 80px; }
+.book h2 { font-size: clamp(40px, 5vw, 66px); margin: 16px 0 24px; }
+.book .info { color: var(--muted); }
+.book .info p { margin-bottom: 10px; }
+.widget { background: var(--bg); border: 1px solid var(--line); padding: 44px; }
+.step { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.chip { padding: 12px 18px; border: 1px solid var(--line); background: transparent; color: var(--ink); font-family: var(--sans); font-size: 14px; cursor: pointer; transition: .2s; }
+.chip:hover { border-color: var(--gold); }
+.chip.on { background: var(--gold); color: #111; border-color: var(--gold); font-weight: 600; }
+.summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid var(--line); padding-top: 28px; flex-wrap: wrap; }
+.summary b { font-family: var(--serif); font-weight: 400; font-size: 22px; display: block; }
+.summary small { color: var(--muted); }
+.done { display: none; text-align: center; padding: 40px 0; }
+.done h3 { font-family: var(--serif); font-weight: 400; font-size: 36px; color: var(--gold); margin-bottom: 10px; }
+
+.quote { text-align: center; }
+.quote q { display: block; font-family: var(--serif); font-style: italic; font-size: clamp(28px, 3.6vw, 46px); line-height: 1.3; max-width: 900px; margin: 26px auto 30px; quotes: none; }
+.quote span { color: var(--muted); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; }
+
+footer { border-top: 1px solid var(--line); padding: 70px 0 36px; color: var(--muted); font-size: 14px; }
+.foot { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+footer h4 { color: var(--ink); font-weight: 500; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; margin-bottom: 16px; }
+.credit { margin-top: 60px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 12px; }
+.credit a { color: var(--gold); }
+
+@media (max-width: 900px) {
+  .links { display: none; position: absolute; top: 88px; left: 0; right: 0; background: var(--bg); flex-direction: column; padding: 28px 24px; gap: 20px; border-bottom: 1px solid var(--line); }
+  .links.open { display: flex; } .burger { display: block; } .nav .btn { display: none; }
+  .intro, .cols, .book .grid, .foot { grid-template-columns: 1fr; gap: 50px; }
+  .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 260px 180px 180px; }
+  .gallery div:first-child { grid-column: span 2; grid-row: auto; }
+  .team { grid-template-columns: 1fr; } .member .pic { height: 380px; }
+  .widget { padding: 28px 22px; } section { padding: 90px 0; } .scroll { display: none; }
+}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#" class="logo">NOIR</a>
+    <nav class="links" id="links"><a href="#services">Services</a><a href="#work">Work</a><a href="#team">Team</a><a href="#book">Book</a></nav>
+    <a href="#book" class="btn btn-gold">Book now</a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="img/hero.jpg" alt="Atelier Noir hair studio">
+  <div class="wrap">
+    <span class="eyebrow">Hair studio · Marylebone</span>
+    <h1>Hair that<br><i>turns heads.</i></h1>
+    <p>Cuts, colour and balayage on Chiltern Street. Every appointment starts with a proper consultation, and it's included in the price.</p>
+    <div class="cta"><a href="#book" class="btn btn-gold">Book appointment</a><a href="#services" class="btn btn-ghost">View services</a></div>
+  </div>
+  
+</section>
+
+<section>
+  <div class="wrap intro">
+    <div><span class="eyebrow">The atelier</span><h2>A small salon,<br>on purpose.</h2></div>
+    <div>
+      <p>Elena opened Noir in 2013 with three chairs and one rule: nobody gets rushed. We've grown to five chairs and that's where we're stopping, so we're rarely running late and never double-booked.</p>
+      <p>We colour with Davines and use Olaplex on every lightening service. And if the look you've saved on Instagram won't work on your hair, we'll tell you, then find one that will.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head"><div><span class="eyebrow">Services</span><h2>Prices</h2></div><p style="color:var(--muted);max-width:360px">These are starting prices. Long or very thick hair costs a bit more, and so does booking with Elena.</p></div>
+    <div class="cols">
+      <div>
+        <div class="cat">Cut &amp; Style</div>
+        <div class="svc"><div class="n">Signature Cut<small>Consultation, wash, cut, blow-dry</small></div><span class="dots"></span><span class="p">£85</span></div>
+        <div class="svc"><div class="n">Restyle<small>A full change of shape</small></div><span class="dots"></span><span class="p">£110</span></div>
+        <div class="svc"><div class="n">Blow-dry &amp; Finish</div><span class="dots"></span><span class="p">£45</span></div>
+        <div class="svc"><div class="n">Occasion Styling<small>Weddings &amp; events</small></div><span class="dots"></span><span class="p">£120</span></div>
+      </div>
+      <div>
+        <div class="cat">Colour</div>
+        <div class="svc"><div class="n">Balayage<small>Hand-painted, lived-in colour</small></div><span class="dots"></span><span class="p">£210</span></div>
+        <div class="svc"><div class="n">Full Highlights</div><span class="dots"></span><span class="p">£175</span></div>
+        <div class="svc"><div class="n">Root Colour</div><span class="dots"></span><span class="p">£75</span></div>
+        <div class="svc"><div class="n">Gloss &amp; Tone</div><span class="dots"></span><span class="p">£50</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <span class="eyebrow">Recent work</span>
+    <h2 style="font-size:clamp(40px,5vw,66px);margin:16px 0 50px">Recent work</h2>
+    <div class="gallery">
+      <div><img src="img/styling.jpg" alt=""></div><div><img src="img/colour.jpg" alt=""></div><div><img src="img/interior.jpg" alt=""></div>
+      <div><img src="img/blowdry.jpg" alt=""></div><div><img src="img/salon.jpg" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="team" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">The team</span>
+    <h2 style="font-size:clamp(40px,5vw,66px);margin-top:16px">Who you'll see</h2>
+    <div class="team">
+      <div class="member"><div class="pic"><img src="img/elena.jpg" alt="Elena Moreau"></div><h3>Elena Moreau</h3><span>Founder · Creative Director</span></div>
+      <div class="member"><div class="pic"><img src="img/jade.jpg" alt="Jade Okafor"></div><h3>Jade Okafor</h3><span>Master Colourist</span></div>
+      <div class="member"><div class="pic"><img src="img/luca.jpg" alt="Luca Bianchi"></div><h3>Luca Bianchi</h3><span>Senior Stylist</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Reservations</span>
+      <h2>Book<br>online.</h2>
+      <div class="info"><p>Pick a service and a time. You'll get a text to confirm, and a reminder the day before. Need to move it? Just reply to the text.</p><p style="margin-top:28px;color:var(--ink)">Chiltern Street, London W1<br>Tue – Wed 10:00 – 19:00<br>Thu – Fri 10:00 – 20:00<br>Sat 9:00 – 17:00<br>020 7946 0917</p></div>
+    </div>
+    <div class="widget">
+      <div id="flow">
+        <p class="step">01 · Service</p>
+        <div class="chips" data-g="svc"><button class="chip on" data-p="85">Signature Cut</button><button class="chip" data-p="210">Balayage</button><button class="chip" data-p="175">Highlights</button><button class="chip" data-p="45">Blow-dry</button></div>
+        <p class="step">02 · Day</p>
+        <div class="chips" data-g="day"><button class="chip on">Tue 14</button><button class="chip">Wed 15</button><button class="chip">Thu 16</button><button class="chip">Fri 17</button><button class="chip">Sat 18</button></div>
+        <p class="step">03 · Time</p>
+        <div class="chips" data-g="time"><button class="chip">10:00</button><button class="chip on">11:30</button><button class="chip">13:00</button><button class="chip">15:30</button><button class="chip">17:00</button></div>
+        <div class="summary"><div><b id="sum">Signature Cut · Tue 14 · 11:30</b><small id="price">from £85 · pay in salon</small></div><button class="btn btn-gold" onclick="document.getElementById('flow').style.display='none';document.getElementById('done').style.display='block'">Confirm booking</button></div>
+      </div>
+      <div class="done" id="done"><h3>You're booked.</h3><p style="color:var(--muted)">A confirmation is on its way to your phone.<br>We look forward to seeing you.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap"><span>From Google</span><q>Jade has done my colour for four years. I moved to Kent last spring and I still come back for it.</q><span>Charlotte Weir</span></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div class="logo" style="color:var(--ink)">NOIR</div><p style="margin-top:14px;max-width:340px">Hair studio on Chiltern Street since 2013.</p></div>
+      <div><h4>Visit</h4>Chiltern Street, W1<br>020 7946 0917</div>
+      <div><h4>Follow</h4>Instagram<br>TikTok<br>Pinterest</div>
+    </div>
+    <div class="credit"><span>Atelier Noir is a fictional salon (concept site).</span><span>Designed by <a href="../index.html">Aryoven Web Studio</a></span></div>
+  </div>
+</footer>
+
+<script>
+const hdr = document.getElementById('hdr');
+addEventListener('scroll', () => hdr.classList.toggle('solid', scrollY > 40));
+function update() {
+  const pick = g => document.querySelector(`[data-g="${g}"] .on`);
+  document.getElementById('sum').textContent = [pick('svc'), pick('day'), pick('time')].map(c => c.textContent).join(' · ');
+  document.getElementById('price').textContent = 'from £' + pick('svc').dataset.p + ' · pay in salon';
+}
+document.querySelectorAll('.chips').forEach(g => g.querySelectorAll('.chip').forEach(c => c.onclick = () => {
+  g.querySelectorAll('.chip').forEach(x => x.classList.remove('on')); c.classList.add('on'); update();
+}));
+document.querySelectorAll('.links a').forEach(a => a.onclick = () => document.getElementById('links').classList.remove('open'));
+</script>
+</body>
+</html>

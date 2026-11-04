@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Velvet Studio | Nails &amp; Lashes, Jewellery Quarter</title>
+<meta name="description" content="Gel manicures, BIAB, nail art and lash extensions in a calm, beautiful studio. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #fbf6f4; --nude: #efe2dc; --mauve: #9c6b74; --plum: #4a2f36; --ink: #2d2226; --muted: #8b7b7f; --line: #eadcd6;
+  --serif: "Gilda Display", Georgia, serif; --sans: "Outfit", system-ui, sans-serif; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+body.lock { overflow: hidden; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; color: transparent; background: linear-gradient(135deg, #efd5d3, #9c6b74); }
+a { color: inherit; text-decoration: none; }
+.wrap { width: min(1220px, 100% - 48px); margin-inline: auto; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.05; }
+.over { font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: var(--mauve); font-weight: 500; }
+.btn { display: inline-block; padding: 16px 32px; border-radius: 999px; font-family: var(--sans); font-size: 15px; font-weight: 500; transition: .25s; cursor: pointer; border: 0; }
+.btn-plum { background: var(--plum); color: var(--bg); } .btn-plum:hover { background: var(--mauve); }
+.btn-soft { background: var(--nude); color: var(--plum); } .btn-soft:hover { background: #e4d0c8; }
+
+header { position: sticky; top: 0; z-index: 40; background: rgba(251,246,244,.9); backdrop-filter: blur(12px); }
+.nav { height: 82px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: var(--serif); font-size: 28px; letter-spacing: .08em; }
+.logo small { font-family: var(--sans); font-size: 10px; letter-spacing: .4em; color: var(--mauve); margin-left: 10px; vertical-align: middle; }
+.links { display: flex; gap: 34px; font-size: 15px; }
+.links a:hover { color: var(--mauve); }
+.burger { display: none; background: none; border: 0; font-size: 26px; cursor: pointer; }
+
+.hero { display: grid; grid-template-columns: 1fr 1.1fr; gap: 70px; align-items: center; padding: 50px 0 100px; }
+.hero h1 { font-size: clamp(54px, 7vw, 100px); margin: 22px 0 26px; }
+.hero h1 em { font-style: italic; color: var(--mauve); }
+.hero p { color: var(--muted); font-size: 18px; max-width: 440px; margin-bottom: 38px; }
+.hero .cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.rating { display: flex; gap: 12px; align-items: center; margin-top: 42px; font-size: 14px; color: var(--muted); }
+.rating b { font-family: var(--serif); font-size: 34px; color: var(--ink); font-weight: 400; }
+.arches { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; height: 620px; }
+.arch { border-radius: 400px 400px 30px 30px; overflow: hidden; }
+.arch:last-child { margin-top: 90px; }
+
+.strip { background: var(--plum); color: var(--nude); padding: 20px 0; overflow: hidden; white-space: nowrap; }
+.strip div { display: inline-block; animation: run 40s linear infinite; font-family: var(--serif); font-size: 22px; }
+.strip span { margin: 0 30px; opacity: .5; }
+@keyframes run { to { transform: translateX(-50%); } }
+
+section { padding: 120px 0; }
+.center { text-align: center; max-width: 620px; margin: 0 auto 60px; }
+.center h2 { font-size: clamp(42px, 5vw, 68px); margin: 14px 0 16px; }
+.center p { color: var(--muted); }
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.svc { background: #fff; border-radius: 28px; padding: 38px 34px; border: 1px solid var(--line); }
+.svc .ic { width: 58px; height: 58px; border-radius: 50%; background: var(--nude); display: grid; place-items: center; font-size: 24px; margin-bottom: 22px; }
+.svc h3 { font-size: 30px; margin-bottom: 18px; }
+.line { display: flex; justify-content: space-between; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.line:last-child { border: 0; }
+.line small { color: var(--muted); display: block; font-size: 12px; }
+.line b { font-weight: 500; color: var(--mauve); white-space: nowrap; }
+
+.gallery { columns: 3; column-gap: 18px; }
+.gallery div { break-inside: avoid; margin-bottom: 18px; border-radius: 22px; overflow: hidden; }
+.gallery .t { height: 440px; } .gallery .s { height: 280px; }
+
+.gift { display: grid; grid-template-columns: 1fr 1fr; background: var(--nude); border-radius: 40px; overflow: hidden; align-items: center; }
+.gift .txt { padding: 80px; }
+.gift h2 { font-size: clamp(40px, 4.6vw, 62px); margin: 14px 0 20px; }
+.gift p { color: var(--muted); margin-bottom: 30px; }
+.card3d { margin: 60px; aspect-ratio: 1.6; border-radius: 26px; background: linear-gradient(135deg, var(--plum), var(--mauve)); color: var(--nude); padding: 36px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 40px 80px rgba(74,47,54,.35); transform: rotate(-4deg); }
+.card3d b { font-family: var(--serif); font-size: 44px; font-weight: 400; }
+
+.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.rev { padding: 34px; border-radius: 28px; background: #fff; border: 1px solid var(--line); }
+.rev .st { color: var(--mauve); letter-spacing: 3px; }
+.rev p { font-family: var(--serif); font-size: 21px; line-height: 1.4; margin: 14px 0 20px; }
+.rev b { font-weight: 500; font-size: 14px; }
+
+footer { background: var(--plum); color: #d9c7c4; padding: 70px 0 34px; }
+.foot { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; font-size: 15px; }
+footer h4 { color: var(--bg); font-weight: 500; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; margin-bottom: 14px; }
+.credit { margin-top: 56px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.14); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 13px; }
+.credit a { color: var(--nude); text-decoration: underline; }
+
+/* booking modal */
+.modal { position: fixed; inset: 0; z-index: 100; background: rgba(45,34,38,.55); backdrop-filter: blur(6px); display: none; align-items: center; justify-content: center; padding: 20px; }
+.modal.open { display: flex; }
+.sheet { background: var(--bg); border-radius: 32px; width: min(560px, 100%); padding: 42px; position: relative; max-height: 92vh; overflow: auto; }
+.x { position: absolute; right: 22px; top: 18px; background: none; border: 0; font-size: 28px; cursor: pointer; color: var(--muted); }
+.sheet h3 { font-size: 34px; margin-bottom: 6px; }
+.bar { height: 4px; background: var(--line); border-radius: 4px; margin: 20px 0 26px; } .bar i { display: block; height: 100%; width: 33%; background: var(--mauve); border-radius: 4px; transition: .3s; }
+.opts { display: grid; gap: 10px; }
+.opt { display: flex; justify-content: space-between; padding: 16px 18px; border-radius: 16px; border: 1.5px solid var(--line); background: #fff; cursor: pointer; font-family: var(--sans); font-size: 15px; text-align: left; }
+.opt:hover { border-color: var(--mauve); }
+.times { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.times .opt { justify-content: center; }
+.pane { display: none; } .pane.on { display: block; }
+
+@media (max-width: 900px) {
+  .links { display: none; position: absolute; top: 82px; left: 0; right: 0; background: var(--bg); flex-direction: column; padding: 24px; gap: 18px; }
+  .links.open { display: flex; } .burger { display: block; } .nav .btn { display: none; }
+  .hero, .gift { grid-template-columns: 1fr; } .arches { height: 440px; } .arch:last-child { margin-top: 50px; }
+  .svc-grid, .reviews, .foot { grid-template-columns: 1fr; } .gallery { columns: 2; }
+  .gift .txt { padding: 44px 28px 10px; } .card3d { margin: 30px; }
+  .sheet { padding: 32px 22px; } .times { grid-template-columns: repeat(3, 1fr); } section { padding: 80px 0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo">VELVET<small>STUDIO</small></a>
+    <nav class="links" id="links"><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#gift">Gift cards</a><a href="#reviews">Reviews</a></nav>
+    <button class="btn btn-plum book">Book now</button>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <div>
+    <span class="over">Jewellery Quarter, Birmingham</span>
+    <h1>Nails &amp; lashes,<br><em>done properly.</em></h1>
+    <p>BIAB, gel, nail art, lashes and brows in a small studio above a jeweller's on Vyse Street. We never book back-to-back, so nobody's rushing your set.</p>
+    <div class="cta"><button class="btn btn-plum book">Book an appointment</button><a href="#services" class="btn btn-soft">Price list</a></div>
+    <div class="rating"><b>4.9</b><span>★★★★★<br>412 reviews on Fresha</span></div>
+  </div>
+  <div class="arches"><div class="arch"><img src="img/hero.jpg" alt="Gel manicure"></div><div class="arch"><img src="img/studio.jpg" alt="Velvet Studio"></div></div>
+</div>
+
+
+<section id="services">
+  <div class="wrap">
+    <div class="center"><h2>Treatments &amp; prices</h2><p>Every nail treatment includes proper cuticle work. Metal tools go through the autoclave between every client, not just a wipe.</p></div>
+    <div class="svc-grid">
+      <div class="svc"><h3>Nails</h3>
+        <div class="line"><span>Gel Manicure<small>60 min</small></span><b>£32</b></div>
+        <div class="line"><span>BIAB Overlay<small>75 min</small></span><b>£40</b></div>
+        <div class="line"><span>Gel Pedicure<small>70 min</small></span><b>£38</b></div>
+        <div class="line"><span>Nail Art<small>per set</small></span><b>from £5</b></div></div>
+      <div class="svc"><h3>Lashes</h3>
+        <div class="line"><span>Classic Full Set<small>90 min</small></span><b>£60</b></div>
+        <div class="line"><span>Russian Volume<small>120 min</small></span><b>£85</b></div>
+        <div class="line"><span>Infill<small>60 min</small></span><b>£40</b></div>
+        <div class="line"><span>Lash Lift &amp; Tint<small>50 min</small></span><b>£45</b></div></div>
+      <div class="svc"><h3>Brows</h3>
+        <div class="line"><span>Brow Lamination<small>45 min</small></span><b>£40</b></div>
+        <div class="line"><span>Shape &amp; Tint<small>30 min</small></span><b>£22</b></div>
+        <div class="line"><span>Henna Brows<small>45 min</small></span><b>£32</b></div>
+        <div class="line"><span>Full Glow Package<small>Lift + lamination</small></span><b>£75</b></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="background:#fff">
+  <div class="wrap">
+    <div class="center"><span class="over">@velvet.jq</span><h2>Recent sets</h2></div>
+    <div class="gallery">
+      <div class="t"><img src="img/nails.jpg" alt=""></div><div class="s"><img src="img/detail.jpg" alt=""></div>
+      <div class="s"><img src="img/hero.jpg" alt=""></div><div class="t"><img src="img/studio.jpg" alt=""></div>
+      <div class="t"><img src="img/detail.jpg" alt=""></div><div class="s"><img src="img/nails.jpg" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="gift">
+  <div class="wrap">
+    <div class="gift">
+      <div class="txt"><span class="over">Gift cards</span><h2>Gift cards</h2><p>Sent by email straight away. Any amount from £20, and they're good for a year on anything we do.</p><a href="#" class="btn btn-plum" onclick="this.textContent='Added to cart ✓';return false">Buy a gift card</a></div>
+      <div class="card3d"><span style="letter-spacing:.3em;font-size:13px">VELVET STUDIO</span><div><small style="opacity:.7">Gift card</small><br><b>£50</b></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <div class="center"><h2>From Fresha reviews</h2></div>
+    <div class="reviews">
+      <div class="rev"><div class="st">★★★★★</div><p>"BIAB lasted just over four weeks with no chips. First time that's ever happened to me."</p><b>Amelia Traynor</b></div>
+      <div class="rev"><div class="st">★★★★★</div><p>"Asked for natural lashes and actually got natural lashes. My mum didn't notice until I told her."</p><b>Nadia R.</b></div>
+      <div class="rev"><div class="st">★★★★★</div><p>"Really clean, easy to park nearby, and Priya is lovely. Booked my next one before I left."</p><b>Grace</b></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div class="logo" style="color:var(--bg)">VELVET<small style="color:var(--nude)">STUDIO</small></div><p style="margin-top:12px;max-width:320px">Nails, lashes and brows in the Jewellery Quarter.</p></div>
+      <div><h4>Studio</h4>Vyse Street, B18 (first floor)<br>Tue – Fri 10:00 – 19:00<br>Sat 9:00 – 17:00</div>
+      <div><h4>Contact</h4>0121 496 0663<br>hello@velvetjq.co.uk</div>
+    </div>
+    <div class="credit"><span>Velvet Studio is a fictional salon (concept site).</span><span>Designed by <a href="../index.html">Aryoven Web Studio</a></span></div>
+  </div>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="sheet">
+    <button class="x" aria-label="Close" onclick="closeModal()">×</button>
+    <span class="over">Book online</span>
+    <h3 id="mt">Choose a treatment</h3>
+    <div class="bar"><i id="prog"></i></div>
+    <div class="pane on" data-s="1"><div class="opts">
+      <button class="opt nx">Gel Manicure <b>£32</b></button><button class="opt nx">BIAB Overlay <b>£40</b></button>
+      <button class="opt nx">Classic Lash Full Set <b>£60</b></button><button class="opt nx">Brow Lamination <b>£40</b></button>
+    </div></div>
+    <div class="pane" data-s="2"><div class="times">
+      <button class="opt nx">10:00</button><button class="opt nx">11:15</button><button class="opt nx">12:30</button><button class="opt nx">14:00</button>
+      <button class="opt nx">15:15</button><button class="opt nx">16:30</button><button class="opt nx">17:45</button><button class="opt nx">19:00</button>
+    </div></div>
+    <div class="pane" data-s="3" style="text-align:center;padding:10px 0">
+      <p style="font-family:var(--serif);font-size:24px;margin:8px 0">See you soon.</p>
+      <p style="color:var(--muted)" id="conf"></p>
+      <button class="btn btn-plum" style="margin-top:22px" onclick="closeModal()">Done</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const modal = document.getElementById('modal'); let step = 1, pick = [];
+function show(s) {
+  step = s; document.querySelectorAll('.pane').forEach(p => p.classList.toggle('on', +p.dataset.s === s));
+  document.getElementById('prog').style.width = (s * 33.4) + '%';
+  document.getElementById('mt').textContent = ['Choose a treatment', 'Pick a time on Thursday', 'Booking confirmed'][s - 1];
+}
+function closeModal() { modal.classList.remove('open'); document.body.classList.remove('lock'); }
+document.querySelectorAll('.book').forEach(b => b.onclick = () => { pick = []; show(1); modal.classList.add('open'); document.body.classList.add('lock'); });
+document.querySelectorAll('.nx').forEach(o => o.onclick = () => {
+  pick.push(o.firstChild.textContent.trim());
+  if (step === 2) document.getElementById('conf').textContent = pick[0] + ' · Thursday at ' + pick[1] + '. We'll text you to confirm.';
+  show(step + 1);
+});
+modal.onclick = e => { if (e.target === modal) closeModal(); };
+document.querySelectorAll('.links a').forEach(a => a.onclick = () => document.getElementById('links').classList.remove('open'));
+</script>
+</body>
+</html>

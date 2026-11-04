@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Forge Fitness | Personal Training in East Austin</title>
+<meta name="description" content="1:1 personal training, small-group strength classes and online coaching. Book a free consultation.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #0c0d0e; --bg2: #141618; --card: #1a1d20; --ink: #f4f4f1; --muted: #8d9297; --lime: #d4ff3a; --line: #262a2e;
+  --display: "Anton", Impact, sans-serif; --sans: "Inter", system-ui, sans-serif; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; color: transparent; background: linear-gradient(135deg, #2a2e33, #0c0d0e); }
+a { color: inherit; text-decoration: none; }
+.wrap { width: min(1240px, 100% - 48px); margin-inline: auto; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; text-transform: uppercase; line-height: .95; letter-spacing: .01em; }
+.kick { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--lime); }
+.kick::before { content: ""; width: 26px; height: 2px; background: var(--lime); }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 18px 30px; font-weight: 700; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; transition: .2s; border: 0; cursor: pointer; font-family: var(--sans); }
+.btn-lime { background: var(--lime); color: #0c0d0e; } .btn-lime:hover { background: #fff; }
+.btn-out { border: 2px solid var(--ink); color: var(--ink); background: transparent; } .btn-out:hover { background: var(--ink); color: var(--bg); }
+
+header { position: fixed; inset: 0 0 auto; z-index: 50; transition: .3s; }
+header.solid { background: rgba(12,13,14,.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav { height: 84px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: var(--display); font-size: 30px; letter-spacing: .06em; }
+.logo span { color: var(--lime); }
+.links { display: flex; gap: 34px; font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.links a:hover { color: var(--lime); }
+.burger { display: none; background: none; border: 0; color: var(--ink); font-size: 26px; cursor: pointer; }
+
+.hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 120px 0 80px; overflow: hidden; }
+.hero > img { position: absolute; inset: 0; filter: grayscale(.4) contrast(1.1); }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(12,13,14,.95) 25%, rgba(12,13,14,.55) 65%, rgba(12,13,14,.35)); }
+.hero .wrap { position: relative; z-index: 2; }
+.hero h1 { font-size: clamp(54px, 11vw, 176px); margin: 24px 0 26px; }
+.hero h1 span { color: var(--lime); }
+.hero p { max-width: 480px; color: #c4c8cc; font-size: 19px; margin-bottom: 38px; }
+.hero .cta { display: flex; gap: 14px; flex-wrap: wrap; }
+.proof { display: flex; gap: 14px; align-items: center; margin-top: 44px; color: #c4c8cc; font-size: 14px; }
+.faces { display: flex; } .faces i { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--bg); margin-left: -10px; background: linear-gradient(135deg, #6b7280, #374151); }
+.faces i:first-child { margin-left: 0; background: linear-gradient(135deg, #d4ff3a, #7a9a10); }
+
+.stats { background: var(--lime); color: #0c0d0e; }
+.stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat { padding: 38px 24px; border-right: 2px solid rgba(12,13,14,.12); }
+.stat:last-child { border: 0; }
+.stat b { font-family: var(--display); font-size: 58px; font-weight: 400; display: block; line-height: 1; }
+.stat span { font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: .06em; }
+
+section { padding: 120px 0; }
+.head { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 56px; flex-wrap: wrap; }
+.head h2 { font-size: clamp(48px, 6.4vw, 96px); margin-top: 16px; }
+.head p { max-width: 380px; color: var(--muted); }
+.programs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.prog { background: var(--card); border: 1px solid var(--line); overflow: hidden; transition: .3s; display: flex; flex-direction: column; }
+.prog:hover { border-color: var(--lime); transform: translateY(-6px); }
+.prog .pic { height: 260px; overflow: hidden; filter: grayscale(.5); transition: .4s; } .prog:hover .pic { filter: none; }
+.prog .body { padding: 30px; flex: 1; display: flex; flex-direction: column; }
+.prog .no { color: var(--lime); font-weight: 700; font-size: 13px; letter-spacing: .14em; }
+.prog h3 { font-size: 38px; margin: 10px 0 12px; }
+.prog p { color: var(--muted); font-size: 15px; flex: 1; }
+.prog .from { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; font-weight: 600; }
+.prog .from b { color: var(--lime); }
+
+.results { background: var(--bg2); }
+.res-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.big { position: relative; min-height: 560px; overflow: hidden; }
+.big .over { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px; background: linear-gradient(transparent, rgba(12,13,14,.95)); }
+.big h3 { font-size: 64px; } .big h3 span { color: var(--lime); }
+.quotes { display: grid; gap: 20px; }
+.q { background: var(--card); border: 1px solid var(--line); padding: 34px; }
+.q .st { color: var(--lime); letter-spacing: 3px; }
+.q p { font-size: 19px; margin: 14px 0 18px; }
+.q b { font-size: 14px; } .q small { color: var(--muted); margin-left: 8px; }
+
+.consult { display: grid; grid-template-columns: 1fr 1.1fr; gap: 70px; align-items: start; }
+.consult h2 { font-size: clamp(48px, 6vw, 90px); margin: 16px 0 24px; }
+.consult h2 span { color: var(--lime); }
+.consult .lead { color: var(--muted); font-size: 18px; margin-bottom: 30px; }
+.checks { list-style: none; } .checks li { padding: 10px 0; font-weight: 500; } .checks li::before { content: "✓"; color: var(--lime); font-weight: 700; margin-right: 14px; }
+.form { background: var(--card); border: 1px solid var(--line); padding: 44px; }
+.form label { display: block; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.goals { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.goal { padding: 11px 16px; border: 1px solid var(--line); background: transparent; color: var(--ink); font-family: var(--sans); font-weight: 600; font-size: 14px; cursor: pointer; }
+.goal.on { background: var(--lime); color: #0c0d0e; border-color: var(--lime); }
+input { width: 100%; padding: 16px; background: var(--bg); border: 1px solid var(--line); color: var(--ink); font-family: var(--sans); font-size: 15px; margin-bottom: 14px; }
+input:focus { outline: 2px solid var(--lime); border-color: transparent; }
+.sent { display: none; text-align: center; padding: 30px 0; } .sent h3 { font-size: 48px; color: var(--lime); margin-bottom: 10px; }
+
+.faq { max-width: 860px; margin: 0 auto; }
+details { border-bottom: 1px solid var(--line); padding: 26px 0; }
+summary { cursor: pointer; font-weight: 600; font-size: 19px; list-style: none; display: flex; justify-content: space-between; gap: 20px; }
+summary::after { content: "+"; color: var(--lime); font-size: 26px; line-height: 1; } details[open] summary::after { content: "–"; }
+details p { color: var(--muted); margin-top: 14px; }
+
+footer { border-top: 1px solid var(--line); padding: 60px 0 34px; color: var(--muted); font-size: 14px; }
+.foot { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+.credit { margin-top: 44px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 12px; }
+.credit a { color: var(--lime); }
+
+@media (max-width: 900px) {
+  .links { display: none; position: absolute; top: 84px; left: 0; right: 0; background: var(--bg); flex-direction: column; padding: 24px; gap: 18px; border-bottom: 1px solid var(--line); }
+  .links.open { display: flex; } .burger { display: block; } .nav .btn { display: none; }
+  .stats .wrap { grid-template-columns: 1fr 1fr; } .stat:nth-child(2) { border-right: 0; } .stat { border-bottom: 2px solid rgba(12,13,14,.12); }
+  .programs, .res-grid, .consult { grid-template-columns: 1fr; }
+  .big { min-height: 420px; } .big h3 { font-size: 46px; } .form { padding: 28px 22px; } section { padding: 80px 0; }
+}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#" class="logo">FORGE<span>.</span></a>
+    <nav class="links" id="links"><a href="#programs">Programs</a><a href="#results">Results</a><a href="#faq">FAQ</a></nav>
+    <a href="#consult" class="btn btn-lime">Free assessment</a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="img/hero.jpg" alt="Strength training at Forge Fitness">
+  <div class="wrap">
+    <span class="kick">Personal training · East Austin</span>
+    <h1>Lift heavy.<br><span>Feel better.</span></h1>
+    <p>Strength coaching for regular people who want to get stronger without living at the gym. Most of our members train twice a week.</p>
+    <div class="cta"><a href="#consult" class="btn btn-lime">Book a free assessment</a><a href="#programs" class="btn btn-out">See programs</a></div>
+    <div class="proof"><span><b style="color:#fff">4.9 on Google</b> · 186 reviews</span></div>
+  </div>
+</section>
+
+<div class="stats"><div class="wrap">
+  <div class="stat"><b>6</b><span>People max per class</span></div><div class="stat"><b>5:30am</b><span>First session</span></div>
+  <div class="stat"><b>$0</b><span>Sign-up fee</span></div><div class="stat"><b>2</b><span>Coaches, Dre &amp; Kim</span></div>
+</div></div>
+
+<section id="programs">
+  <div class="wrap">
+    <div class="head"><div><span class="kick">Programs</span><h2>How we train</h2></div><p>Everyone starts with a 45-minute assessment, so we know where you are before we give you anything heavy.</p></div>
+    <div class="programs">
+      <div class="prog"><div class="pic"><img src="img/coach.jpg" alt=""></div><div class="body"><span class="no">01</span><h3>1:1 Training</h3><p>Just you and a coach. Best if you're coming back from an injury or want to move fast.</p><div class="from"><span>From</span><b>$75 / session</b></div></div></div>
+      <div class="prog"><div class="pic"><img src="img/weights.jpg" alt=""></div><div class="body"><span class="no">02</span><h3>Small Group</h3><p>Six people, one coach, a proper program. Cheaper than 1:1 and more fun than it sounds.</p><div class="from"><span>From</span><b>$149 / month</b></div></div></div>
+      <div class="prog"><div class="pic"><img src="img/training.jpg" alt=""></div><div class="body"><span class="no">03</span><h3>Online Coaching</h3><p>Your program in the app, a check-in every Sunday, and video feedback on your lifts.</p><div class="from"><span>From</span><b>$99 / month</b></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="results" id="results">
+  <div class="wrap">
+    <div class="head"><div><span class="kick">Members</span><h2>What they say</h2></div></div>
+    <div class="res-grid">
+      <div class="big"><img src="img/training.jpg" alt=""><div class="over"><h3>Down 30 lb<br><span>in 5 months.</span></h3><p style="color:#c4c8cc;margin-top:10px">Sarah, 34 · 1:1 Training</p></div></div>
+      <div class="quotes">
+        <div class="q"><div class="st">★★★★★</div><p>"I quit three gyms before this one. Two years in and I still show up, which says it all. Deadlifting 245 now."</p><b>Hannah Kelleher</b><small>Small Group</small></div>
+        <div class="q"><div class="st">★★★★★</div><p>"The Sunday check-ins keep me honest when I'm traveling for work. Dre actually reads them, which I didn't expect."</p><b>Omar</b><small>Online Coaching</small></div>
+        <div class="q"><div class="st">★★★★★</div><p>"Came in with a bad back and mostly just wanted it to stop hurting. It did. Getting stronger was a bonus."</p><b>Claire D.</b><small>1:1 Training</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="consult">
+  <div class="wrap consult">
+    <div>
+      <span class="kick">Free consultation</span>
+      <h2>Start with a<br><span>free assessment.</span></h2>
+      <p class="lead">45 minutes with a coach. We'll watch how you move, talk about what you want, and tell you honestly which program fits. No hard sell.</p>
+      <ul class="checks"><li>A chat about your goals and schedule</li><li>A movement check (nothing scary)</li><li>A straight answer on what to do next</li></ul>
+    </div>
+    <div class="form">
+      <div id="fw">
+        <label>Your main goal</label>
+        <div class="goals"><button class="goal on">Lose fat</button><button class="goal">Build muscle</button><button class="goal">Get stronger</button><button class="goal">Move without pain</button></div>
+        <form onsubmit="event.preventDefault();document.getElementById('fw').style.display='none';document.getElementById('sent').style.display='block'">
+          <label>Your details</label>
+          <input required placeholder="Full name"><input required type="email" placeholder="Email"><input required type="tel" placeholder="Phone">
+          <button class="btn btn-lime" style="width:100%;justify-content:center">Book my assessment</button>
+        </form>
+      </div>
+      <div class="sent" id="sent"><h3>Thanks!</h3><p style="color:var(--muted)">Dre or Kim will call you within a day to find a time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head" style="justify-content:center;text-align:center"><div><span class="kick">FAQ</span><h2>Questions?</h2></div></div>
+    <div class="faq">
+      <details><summary>I've never trained before. Is this for me?</summary><p>Yes. Most of our members had never touched a barbell before they walked in. We start light and build up.</p></details>
+      <details><summary>How many sessions a week do I need?</summary><p>Two to three sessions a week is the sweet spot for most people. We'll build a plan that fits your schedule.</p></details>
+      <details><summary>Do you help with nutrition?</summary><p>A bit. We'll help you with the basics like protein and sleep, but we're not dietitians and we won't pretend to be.</p></details>
+      <details><summary>Can I cancel any time?</summary><p>Yes. Monthly plans are rolling, with no long-term contracts and no cancellation fees.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot"><div><div class="logo" style="color:var(--ink)">FORGE<span>.</span></div><p style="margin-top:10px">Personal training &amp; strength coaching.</p></div><div>E Cesar Chavez St, Austin, TX<br>(512) 555-0147<br>Mon – Fri 5:30am – 8pm · Sat 8am – noon</div><div>Instagram · YouTube</div></div>
+    <div class="credit"><span>Forge Fitness is a fictional gym (concept site).</span><span>Designed by <a href="../index.html">Aryoven Web Studio</a></span></div>
+  </div>
+</footer>
+
+<script>
+const hdr = document.getElementById('hdr');
+addEventListener('scroll', () => hdr.classList.toggle('solid', scrollY > 40));
+document.querySelectorAll('.goal').forEach(g => g.onclick = () => { document.querySelectorAll('.goal').forEach(x => x.classList.remove('on')); g.classList.add('on'); });
+document.querySelectorAll('.links a').forEach(a => a.onclick = () => document.getElementById('links').classList.remove('open'));
+</script>
+</body>
+</html>

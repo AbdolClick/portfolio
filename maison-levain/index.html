@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Maison Levain | Bakery in Bedminster, Bristol</title>
+<meta name="description" content="Naturally leavened sourdough, laminated pastries and celebration cakes, baked fresh every morning.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #f7f1e8; --paper: #fbf8f3; --ink: #2b1d14; --brown: #6b4128; --crust: #b7773f; --muted: #7d6a5c; --line: #e6dccd;
+  --serif: "Cormorant Garamond", Georgia, serif; --sans: "Inter", system-ui, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); color: var(--ink); background: var(--paper); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; color: transparent; background: linear-gradient(135deg, #e9d3b5, #b7773f); }
+a { color: inherit; text-decoration: none; }
+.wrap { width: min(1200px, 100% - 48px); margin-inline: auto; }
+.eyebrow { font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: var(--crust); font-weight: 600; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.02; letter-spacing: -.01em; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 28px; border-radius: 999px; font-weight: 600; font-size: 15px; transition: .25s; cursor: pointer; border: 0; font-family: var(--sans); }
+.btn-dark { background: var(--ink); color: var(--cream); } .btn-dark:hover { background: var(--brown); }
+.btn-line { border: 1.5px solid var(--ink); color: var(--ink); background: transparent; } .btn-line:hover { background: var(--ink); color: var(--cream); }
+
+/* nav */
+header { position: sticky; top: 0; z-index: 50; background: rgba(251, 248, 243, .88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+.logo { font-family: var(--serif); font-size: 28px; font-weight: 700; letter-spacing: .02em; }
+.logo small { display: block; font-family: var(--sans); font-size: 9px; letter-spacing: .4em; color: var(--muted); font-weight: 500; margin-top: -2px; }
+.links { display: flex; gap: 36px; font-size: 14px; font-weight: 500; }
+.links a:hover { color: var(--crust); }
+.burger { display: none; background: none; border: 0; font-size: 26px; cursor: pointer; color: var(--ink); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center; padding: 72px 0 96px; }
+.hero h1 { font-size: clamp(54px, 7.4vw, 104px); margin: 22px 0 26px; }
+.hero h1 em { color: var(--crust); font-weight: 500; }
+.hero p { font-size: 18px; color: var(--muted); max-width: 470px; margin-bottom: 36px; }
+.hero .cta { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-img { position: relative; height: 620px; }
+.hero-img .main { height: 100%; border-radius: 300px 300px 24px 24px; overflow: hidden; }
+.badge { position: absolute; left: -40px; bottom: 60px; background: var(--paper); padding: 22px 26px; border-radius: 20px; box-shadow: 0 30px 60px rgba(43, 29, 20, .18); }
+.badge b { font-family: var(--serif); font-size: 34px; display: block; line-height: 1; }
+.badge span { font-size: 13px; color: var(--muted); }
+.stamp { position: absolute; right: -24px; top: 40px; width: 128px; height: 128px; border-radius: 50%; background: var(--crust); color: var(--cream); display: grid; place-items: center; text-align: center; font-family: var(--serif); font-size: 19px; line-height: 1.1; transform: rotate(-10deg); box-shadow: 0 20px 40px rgba(183, 119, 63, .4); }
+
+/* ticker */
+.ticker { background: var(--ink); color: var(--cream); overflow: hidden; white-space: nowrap; padding: 18px 0; }
+.ticker div { display: inline-block; animation: tick 32s linear infinite; font-family: var(--serif); font-size: 24px; font-style: italic; }
+.ticker span { margin: 0 28px; color: var(--crust); font-style: normal; }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+/* menu */
+section { padding: 110px 0; }
+.head { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 52px; flex-wrap: wrap; }
+.head h2 { font-size: clamp(40px, 5vw, 64px); margin-top: 14px; }
+.head p { max-width: 380px; color: var(--muted); }
+.tabs { display: flex; gap: 10px; margin-bottom: 36px; flex-wrap: wrap; }
+.tab { padding: 10px 20px; border-radius: 999px; border: 1px solid var(--line); background: transparent; font-family: var(--sans); font-size: 14px; cursor: pointer; color: var(--muted); }
+.tab.on { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.item { background: #fff; border-radius: 22px; overflow: hidden; border: 1px solid var(--line); transition: .3s; }
+.item:hover { transform: translateY(-6px); box-shadow: 0 26px 50px rgba(43, 29, 20, .1); }
+.item .pic { height: 240px; overflow: hidden; }
+.item .body { padding: 22px 24px 24px; }
+.item h3 { font-size: 26px; display: flex; justify-content: space-between; gap: 12px; }
+.item h3 span { color: var(--crust); }
+.item p { font-size: 14px; color: var(--muted); margin: 6px 0 18px; }
+.add { width: 100%; padding: 12px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--paper); font-family: var(--sans); font-weight: 600; cursor: pointer; transition: .2s; }
+.add:hover, .add.done { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.item[hidden] { display: none; }
+
+/* story */
+.story { background: var(--cream); }
+.story .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.story .pics { position: relative; height: 560px; }
+.story .p1 { position: absolute; inset: 0 100px 80px 0; border-radius: 24px; overflow: hidden; }
+.story .p2 { position: absolute; right: 0; bottom: 0; width: 55%; height: 55%; border-radius: 24px; overflow: hidden; border: 8px solid var(--cream); }
+.story h2 { font-size: clamp(40px, 4.6vw, 60px); margin: 16px 0 24px; }
+.story p { color: var(--muted); margin-bottom: 18px; font-size: 17px; }
+.stats { display: flex; gap: 48px; margin-top: 36px; }
+.stats b { font-family: var(--serif); font-size: 48px; display: block; line-height: 1; }
+.stats span { font-size: 13px; color: var(--muted); }
+
+/* cakes */
+.cakes { display: grid; grid-template-columns: 1.2fr 1fr; border-radius: 32px; overflow: hidden; background: var(--ink); color: var(--cream); }
+.cakes .txt { padding: 72px; }
+.cakes h2 { font-size: clamp(40px, 4.6vw, 62px); margin: 16px 0 20px; }
+.cakes p { color: #cdbfb2; margin-bottom: 30px; }
+.cakes ul { list-style: none; margin-bottom: 36px; }
+.cakes li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.12); display: flex; justify-content: space-between; }
+.cakes li span { color: var(--crust); font-family: var(--serif); font-size: 20px; }
+.cakes .btn-dark { background: var(--cream); color: var(--ink); }
+.cakes .pic { min-height: 520px; }
+
+/* reviews */
+.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.rev { padding: 36px; border-radius: 22px; background: #fff; border: 1px solid var(--line); }
+.stars { color: var(--crust); letter-spacing: 3px; }
+.rev q { display: block; font-family: var(--serif); font-size: 23px; line-height: 1.35; margin: 16px 0 22px; quotes: none; }
+.rev b { font-size: 14px; } .rev small { display: block; color: var(--muted); font-size: 13px; }
+
+/* order + visit */
+.visit { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 28px; padding: 48px; }
+.card h2 { font-size: 44px; margin: 12px 0 26px; }
+form { display: grid; gap: 14px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+input, select, textarea { width: 100%; padding: 15px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--paper); font-family: var(--sans); font-size: 15px; color: var(--ink); }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--crust); border-color: transparent; }
+.ok { display: none; padding: 16px; border-radius: 12px; background: #eef6ea; color: #2f5d27; font-weight: 500; }
+.hours { list-style: none; margin-bottom: 28px; }
+.hours li { display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px dashed var(--line); }
+.hours .today { color: var(--crust); font-weight: 600; }
+.map { height: 200px; border-radius: 18px; background: #e9e1d4; position: relative; overflow: hidden;
+  background-image: linear-gradient(#ddd2c1 1.5px, transparent 1.5px), linear-gradient(90deg, #ddd2c1 1.5px, transparent 1.5px); background-size: 40px 40px; }
+.map::after { content: ""; position: absolute; left: 48%; top: 38%; width: 30px; height: 30px; border-radius: 50% 50% 50% 0; background: var(--crust); transform: rotate(-45deg); box-shadow: 0 8px 16px rgba(0,0,0,.2); }
+.addr { margin-top: 18px; color: var(--muted); }
+
+footer { background: var(--ink); color: #cdbfb2; padding: 64px 0 36px; }
+.foot { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+footer .logo { color: var(--cream); }
+.credit { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.credit a { color: var(--crust); }
+
+@media (max-width: 900px) {
+  .links { display: none; position: absolute; top: 76px; left: 0; right: 0; background: var(--paper); flex-direction: column; padding: 24px; gap: 18px; border-bottom: 1px solid var(--line); }
+  .links.open { display: flex; }
+  .burger { display: block; }
+  .nav > .btn { display: none; }
+  .hero, .story .grid, .cakes, .visit { grid-template-columns: 1fr; }
+  .hero { padding-top: 40px; gap: 40px; }
+  .hero-img { height: 440px; }
+  .badge { left: 12px; } .stamp { right: 8px; width: 104px; height: 104px; font-size: 16px; }
+  .menu, .reviews { grid-template-columns: 1fr; }
+  .story .pics { height: 420px; }
+  .cakes .txt, .card { padding: 36px 26px; }
+  .cakes .pic { min-height: 320px; }
+  section { padding: 80px 0; }
+  .row2 { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo">Maison Levain<small>ARTISAN BAKERY</small></a>
+    <nav class="links" id="links"><a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#cakes">Celebration Cakes</a><a href="#visit">Visit</a></nav>
+    <a href="#order" class="btn btn-dark">Order for pickup</a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <span class="eyebrow">Bedminster, Bristol · since 2014</span>
+    <h1>Slow bread,<br><em>made by hand.</em></h1>
+    <p>Sourdough, pastries and cakes from a small bakery on North Street. We start at 4am and keep baking until the shelves are full.</p>
+    <div class="cta"><a href="#order" class="btn btn-dark">Order for pickup →</a><a href="#menu" class="btn btn-line">See today's bake</a></div>
+  </div>
+  <div class="hero-img">
+    <div class="main"><img src="img/hero.jpg" alt="Fresh sourdough loaves"></div>
+    <div class="badge"><b>4.8 ★</b><span>612 reviews on Google</span></div>
+    <div class="stamp">Closed<br>Mondays</div>
+  </div>
+</div>
+
+<div class="ticker"><div>Country Sourdough <span>·</span> Butter Croissant <span>·</span> Cardamom Bun <span>·</span> Pain au Chocolat <span>·</span> Seeded Rye <span>·</span> Celebration Cakes <span>·</span> Country Sourdough <span>·</span> Butter Croissant <span>·</span> Cardamom Bun <span>·</span> Pain au Chocolat <span>·</span> Seeded Rye <span>·</span> Celebration Cakes <span>·</span></div></div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head"><div><h2>What's on<br>the counter.</h2></div><p>It changes a little every day, but these are the regulars. Order before 8pm and it'll be waiting for you in the morning.</p></div>
+    <div class="tabs"><button class="tab on" data-f="all">All</button><button class="tab" data-f="bread">Bread</button><button class="tab" data-f="pastry">Pastry</button><button class="tab" data-f="cake">Cakes</button></div>
+    <div class="menu">
+      <div class="item" data-c="bread"><div class="pic"><img src="img/hero.jpg" alt=""></div><div class="body"><h3>Country Sourdough <span>£5.80</span></h3><p>Our everyday loaf. 36-hour ferment, Shipton Mill flour.</p><button class="add">Add to order</button></div></div>
+      <div class="item" data-c="pastry"><div class="pic"><img src="img/croissant.jpg" alt=""></div><div class="body"><h3>Butter Croissant <span>£2.90</span></h3><p>Proper French butter. Usually gone by eleven.</p><button class="add">Add to order</button></div></div>
+      <div class="item" data-c="cake"><div class="pic"><img src="img/cake.jpg" alt=""></div><div class="body"><h3>Vanilla Berry Cake <span>£38</span></h3><p>Vanilla sponge, cream, whatever berries are good.</p><button class="add">Add to order</button></div></div>
+      <div class="item" data-c="pastry"><div class="pic"><img src="img/pastries.jpg" alt=""></div><div class="body"><h3>Cardamom Bun <span>£3.40</span></h3><p>The one everyone asks about. Sold out most Saturdays.</p><button class="add">Add to order</button></div></div>
+      <div class="item" data-c="bread"><div class="pic"><img src="img/shop.jpg" alt=""></div><div class="body"><h3>Seeded Rye <span>£6.20</span></h3><p>Dark rye, sunflower and linseed. Keeps for a week.</p><button class="add">Add to order</button></div></div>
+      <div class="item" data-c="pastry"><div class="pic"><img src="img/croissant.jpg" alt=""></div><div class="body"><h3>Pain au Chocolat <span>£3.20</span></h3><p>Two sticks of dark chocolate, not one.</p><button class="add">Add to order</button></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap grid">
+    <div class="pics"><div class="p1"><img src="img/shop.jpg" alt="Inside the bakery"></div><div class="p2"><img src="img/croissant.jpg" alt="Croissants"></div></div>
+    <div>
+      <span class="eyebrow">About us</span>
+      <h2>Ten years of<br>getting up at 4am.</h2>
+      <p>Tom started baking in a rented flat in Southville, mostly because he couldn't find a loaf he liked. Two years and a lot of flat, sad bread later, he and Inês took over the old butcher's on North Street.</p>
+      <p>There are six of us now. Whatever's left at closing goes to the food bank on East Street, and our starter, Doris, is older than the shop.</p>
+      <p style="font-family:var(--serif);font-style:italic;font-size:22px;color:var(--ink)">Tom &amp; Inês</p>
+    </div>
+  </div>
+</section>
+
+<section id="cakes">
+  <div class="wrap">
+    <div class="cakes">
+      <div class="txt">
+        <span class="eyebrow">Celebration cakes</span>
+        <h2>Birthdays, weddings<br>and ordinary Tuesdays.</h2>
+        <p>Tell us roughly what you have in mind and we'll send back a sketch and a price. We need three days' notice, a bit more in June.</p>
+        <ul><li>6" cake · serves 8–10 <span>from £38</span></li><li>8" cake · serves 14–18 <span>from £56</span></li><li>Wedding cakes <span>let's talk</span></li></ul>
+        <a href="#order" class="btn btn-dark">Ask about a cake</a>
+      </div>
+      <div class="pic"><img src="img/cake.jpg" alt="Celebration cake"></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><div><h2>From Google reviews</h2></div></div>
+    <div class="reviews">
+      <div class="rev"><div class="stars">★★★★★</div><q>Best sourdough in Bristol and I'll die on that hill. Get there before 10 on a Saturday or the cardamom buns are gone.</q><b>Sophie Marsh</b><small>2 weeks ago</small></div>
+      <div class="rev"><div class="stars">★★★★☆</div><q>Made our wedding cake at really short notice and it was lovely. Only losing a star for the Saturday queue, which is fair enough.</q><b>James Pethick</b><small>3 months ago</small></div>
+      <div class="rev"><div class="stars">★★★★★</div><q>Pre-ordering is brilliant. Picked up at 8 and the croissants were still warm.</q><b>Dan Reeves</b><small>a month ago</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="background:var(--cream)">
+  <div class="wrap visit">
+    <div class="card" id="order">
+      <span class="eyebrow">Order ahead</span>
+      <h2>Skip the queue.</h2>
+      <form onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('ok').style.display='block';">
+        <div class="row2"><input required placeholder="Your name"><input required type="tel" placeholder="Phone"></div>
+        <div class="row2"><input required type="date"><select><option>Pickup 7:00 – 9:00</option><option>Pickup 9:00 – 12:00</option><option>Pickup 12:00 – 15:00</option></select></div>
+        <textarea rows="3" id="items" placeholder="What would you like? e.g. 2 croissants, 1 sourdough"></textarea>
+        <button class="btn btn-dark" style="justify-content:center">Place pickup order</button>
+      </form>
+      <div class="ok" id="ok">Got it. We'll text you when it's ready to collect.</div>
+    </div>
+    <div class="card">
+      <span class="eyebrow">Visit us</span>
+      <h2>Opening times</h2>
+      <ul class="hours" id="hours"><li><span>Monday</span><span>Closed</span></li><li><span>Tuesday – Friday</span><span>7:30 – 16:00</span></li><li><span>Saturday</span><span>8:00 – 15:00</span></li><li><span>Sunday</span><span>9:00 – 13:00</span></li></ul>
+      <iframe class="map" title="Map of Bedminster, Bristol" loading="lazy" style="border:0;width:100%;display:block;filter:saturate(.7)" src="https://www.openstreetmap.org/export/embed.html?bbox=-2.615,51.437,-2.599,51.444&amp;layer=mapnik"></iframe>
+      <p class="addr">North Street, Bedminster, Bristol BS3 · 0117 496 0381 · hello@maisonlevain.co.uk</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot"><div><div class="logo">Maison Levain<small>ARTISAN BAKERY</small></div><p style="margin-top:14px;max-width:320px">Bakery and coffee on North Street, Bedminster.</p></div><div>@maisonlevain.bristol</div></div>
+    <div class="credit"><span>Maison Levain is a fictional bakery (concept site).</span><span>Designed by <a href="../index.html">Aryoven Web Studio</a></span></div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.remove('on')); t.classList.add('on');
+  document.querySelectorAll('.item').forEach(i => i.hidden = t.dataset.f !== 'all' && i.dataset.c !== t.dataset.f);
+});
+document.querySelectorAll('.add').forEach(b => b.onclick = () => {
+  const name = b.closest('.item').querySelector('h3').firstChild.textContent.trim();
+  const box = document.getElementById('items'); box.value += (box.value ? ', ' : '') + '1 ' + name;
+  b.textContent = 'Added ✓'; b.classList.add('done');
+});
+document.querySelectorAll('.links a').forEach(a => a.onclick = () => document.getElementById('links').classList.remove('open'));
+</script>
+</body>
+</html>

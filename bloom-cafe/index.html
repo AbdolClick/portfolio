@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bloom | Café &amp; Brunch in Ancoats, Manchester</title>
+<meta name="description" content="Specialty coffee and all-day brunch. See the menu, check opening hours and reserve a table.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --cream: #f5efe4; --paper: #fbf8f2; --green: #2e4a3b; --green2: #3f6250; --blush: #f2c9c1; --terra: #c56b4e; --ink: #1f2d25; --muted: #6e7a72; --line: #e3dccd;
+  --serif: "Fraunces", Georgia, serif; --sans: "DM Sans", system-ui, sans-serif; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; color: transparent; background: linear-gradient(135deg, #cfd8c9, #6e8a78); }
+a { color: inherit; text-decoration: none; }
+.wrap { width: min(1220px, 100% - 48px); margin-inline: auto; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.02; letter-spacing: -.02em; }
+.tag { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--terra); }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; border-radius: 16px; font-weight: 700; font-size: 15px; transition: .25s; border: 0; cursor: pointer; font-family: var(--sans); }
+.btn-green { background: var(--green); color: var(--cream); } .btn-green:hover { background: var(--terra); }
+.btn-soft { background: var(--cream); color: var(--green); } .btn-soft:hover { background: var(--blush); }
+
+header { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid var(--line); }
+.nav { height: 78px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: var(--serif); font-size: 30px; font-style: italic; color: var(--green); }
+.links { display: flex; gap: 34px; font-weight: 500; font-size: 15px; }
+.links a:hover { color: var(--terra); }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; padding: 8px 14px; border-radius: 999px; background: #e3eee6; color: var(--green); }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: #3aa66a; box-shadow: 0 0 0 4px rgba(58,166,106,.2); }
+.status.closed { background: #f6e3de; color: var(--terra); } .status.closed i { background: var(--terra); box-shadow: 0 0 0 4px rgba(197,107,78,.2); }
+.burger { display: none; background: none; border: 0; font-size: 26px; cursor: pointer; }
+
+.hero { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; padding: 40px 0 80px; }
+.h-main { grid-column: span 7; background: var(--green); color: var(--cream); border-radius: 36px; padding: 64px; position: relative; overflow: hidden; min-height: 600px; display: flex; flex-direction: column; justify-content: space-between; }
+.h-main h1 { font-size: clamp(54px, 7vw, 100px); }
+.h-main h1 i { color: var(--blush); }
+.h-main p { max-width: 420px; color: #cbd6cd; font-size: 18px; margin: 24px 0 36px; }
+.h-main .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.circle { position: absolute; right: -80px; top: -80px; width: 280px; height: 280px; border-radius: 50%; border: 1.5px dashed rgba(242,201,193,.5); }
+.h-side { grid-column: span 5; display: grid; grid-template-rows: 1.4fr 1fr; gap: 20px; }
+.h-img { border-radius: 36px; overflow: hidden; }
+.h-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.mini { border-radius: 28px; padding: 26px; display: flex; flex-direction: column; justify-content: space-between; }
+.mini b { font-family: var(--serif); font-size: 40px; font-weight: 400; line-height: 1; }
+.mini span { font-size: 14px; }
+
+section { padding: 100px 0; }
+.sec-head { text-align: center; max-width: 640px; margin: 0 auto 50px; }
+.sec-head h2 { font-size: clamp(42px, 5vw, 70px); margin: 14px 0 16px; }
+.sec-head p { color: var(--muted); }
+.tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 44px; flex-wrap: wrap; }
+.tab { padding: 12px 24px; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; font-family: var(--sans); font-weight: 700; color: var(--muted); cursor: pointer; }
+.tab.on { background: var(--green); border-color: var(--green); color: var(--cream); }
+.menu { display: grid; grid-template-columns: 1fr 1fr; gap: 0 70px; max-width: 1000px; margin: 0 auto; }
+.dish { display: flex; gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.dish h3 { font-size: 24px; display: flex; gap: 12px; align-items: baseline; }
+.dish h3 .v { font-family: var(--sans); font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; background: #e3eee6; color: var(--green); }
+.dish p { color: var(--muted); font-size: 14px; margin-top: 4px; }
+.dish .pr { margin-left: auto; font-family: var(--serif); font-size: 22px; color: var(--terra); white-space: nowrap; }
+.dish[hidden] { display: none; }
+
+.space { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.space div { border-radius: 28px; overflow: hidden; height: 420px; }
+.space div:nth-child(2) { transform: translateY(50px); }
+
+.res { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.res-form { background: var(--blush); border-radius: 36px; padding: 56px; }
+.res-form h2 { font-size: clamp(40px, 4.4vw, 58px); margin: 12px 0 28px; }
+form { display: grid; gap: 12px; }
+.r2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+input, select { width: 100%; padding: 16px; border-radius: 14px; border: 0; background: var(--paper); font-family: var(--sans); font-size: 15px; color: var(--ink); }
+input:focus, select:focus { outline: 2px solid var(--green); }
+.thanks { display: none; background: var(--paper); border-radius: 16px; padding: 22px; font-weight: 500; }
+.find { background: var(--cream); border-radius: 36px; padding: 56px; display: flex; flex-direction: column; }
+.find h2 { font-size: clamp(40px, 4.4vw, 58px); margin: 12px 0 24px; }
+.hours { list-style: none; margin-bottom: 26px; }
+.hours li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #d6ccb9; }
+.map { flex: 1; min-height: 190px; border-radius: 22px; background: #dfe7da; position: relative;
+  background-image: linear-gradient(#cfdac9 2px, transparent 2px), linear-gradient(90deg, #cfdac9 2px, transparent 2px); background-size: 44px 44px; }
+.map::after { content: "Bloom"; position: absolute; left: 44%; top: 38%; background: var(--green); color: var(--cream); padding: 8px 14px; border-radius: 12px; font-weight: 700; font-size: 13px; box-shadow: 0 10px 20px rgba(0,0,0,.15); }
+
+.insta { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 40px; }
+.insta div { aspect-ratio: 1; border-radius: 18px; overflow: hidden; }
+
+footer { background: var(--green); color: #cbd6cd; padding: 70px 0 34px; margin-top: 100px; }
+.foot { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+footer .logo { color: var(--cream); }
+.credit { margin-top: 50px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.14); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.credit a { color: var(--blush); }
+
+@media (max-width: 900px) {
+  .links { display: none; position: absolute; top: 78px; left: 0; right: 0; background: var(--paper); flex-direction: column; padding: 24px; gap: 18px; border-bottom: 1px solid var(--line); }
+  .links.open { display: flex; } .burger { display: block; } .nav .status { display: none; }
+  .h-main, .h-side { grid-column: span 12; } .h-main { padding: 40px 28px; min-height: 520px; }
+  .h-side { grid-template-rows: 300px auto; }
+  .menu, .res { grid-template-columns: 1fr; }
+  .space { grid-template-columns: 1fr; } .space div { height: 300px; } .space div:nth-child(2) { transform: none; }
+  .res-form, .find { padding: 36px 24px; } .r2 { grid-template-columns: 1fr; }
+  .insta { grid-template-columns: repeat(3, 1fr); } section { padding: 70px 0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo">Bloom</a>
+    <nav class="links" id="links"><a href="#menu">Menu</a><a href="#space">The space</a><a href="#reserve">Reserve</a><a href="#find">Find us</a></nav>
+    <span class="status" id="status"><i></i><span>Open now</span></span>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <div class="h-main">
+    <div class="circle"></div>
+    <span class="tag" style="color:var(--blush)">Ancoats, Manchester</span>
+    <div>
+      <h1>Good coffee,<br><i>long brunches.</i></h1>
+      <p>Coffee roasted down the road in Salford, eggs from a farm in Cheshire, and the big window seat if you get here early. Dogs welcome.</p>
+      <div class="cta"><a href="#reserve" class="btn btn-soft">Reserve a table →</a><a href="#menu" class="btn" style="color:var(--cream);border:1.5px solid rgba(245,239,228,.35)">View menu</a></div>
+    </div>
+  </div>
+  <div class="h-side">
+    <div class="h-img"><img src="img/hero.jpg" alt="Latte art at Bloom Café"></div>
+    <div class="h-cards">
+      <div class="mini" style="background:var(--blush)"><b>4.7★</b><span>on Google, 940 reviews</span></div>
+      <div class="mini" style="background:var(--cream)"><b>3pm</b><span>Kitchen closes. Coffee until 4.</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="menu" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head"><h2>Menu</h2><p>Brunch is served until 3. Oat milk is free. Ask us about allergens, we're happy to help.</p></div>
+    <div class="tabs"><button class="tab on" data-f="coffee">Coffee</button><button class="tab" data-f="brunch">Brunch</button><button class="tab" data-f="sweet">Sweet</button></div>
+    <div class="menu">
+      <div class="dish" data-c="coffee"><div><h3>Flat White</h3><p>Double ristretto, silky micro-foam.</p></div><span class="pr">£3.40</span></div>
+      <div class="dish" data-c="coffee"><div><h3>Oat Cortado <span class="v">VG</span></h3><p>Equal parts espresso and oat milk.</p></div><span class="pr">£3.30</span></div>
+      <div class="dish" data-c="coffee"><div><h3>Ceremonial Matcha</h3><p>Whisked to order, Uji-grown.</p></div><span class="pr">£4.20</span></div>
+      <div class="dish" data-c="coffee"><div><h3>Filter of the Day</h3><p>Rotating single origin, V60.</p></div><span class="pr">£3.80</span></div>
+      <div class="dish" data-c="brunch" hidden><div><h3>Avocado Sourdough <span class="v">V</span></h3><p>Chilli, lime, feta, poached egg.</p></div><span class="pr">£10.50</span></div>
+      <div class="dish" data-c="brunch" hidden><div><h3>Shakshuka</h3><p>Slow tomato, peppers, eggs, labneh.</p></div><span class="pr">£11.50</span></div>
+      <div class="dish" data-c="brunch" hidden><div><h3>Bloom Benedict</h3><p>Smoked salmon, hollandaise, brioche.</p></div><span class="pr">£12.50</span></div>
+      <div class="dish" data-c="brunch" hidden><div><h3>Green Bowl <span class="v">VG</span></h3><p>Quinoa, greens, tahini, pickles.</p></div><span class="pr">£10</span></div>
+      <div class="dish" data-c="sweet" hidden><div><h3>Ricotta Pancakes</h3><p>Berries, whipped honey butter.</p></div><span class="pr">£10</span></div>
+      <div class="dish" data-c="sweet" hidden><div><h3>Banana Bread</h3><p>Toasted, with cultured butter.</p></div><span class="pr">£3.50</span></div>
+      <div class="dish" data-c="sweet" hidden><div><h3>Pistachio Croissant</h3><p>Twice-baked, pistachio frangipane.</p></div><span class="pr">£4.20</span></div>
+      <div class="dish" data-c="sweet" hidden><div><h3>Chai Affogato</h3><p>Vanilla gelato, spiced chai shot.</p></div><span class="pr">£5</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="space" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head"><h2>The room</h2><p>Forty seats, big windows, and no laptops at the weekend (sorry).</p></div>
+    <div class="space"><div><img src="img/space.jpg" alt=""></div><div><img src="img/brunch.jpg" alt=""></div><div><img src="img/interior.jpg" alt=""></div></div>
+  </div>
+</section>
+
+<section id="reserve">
+  <div class="wrap res">
+    <div class="res-form">
+      <h2>Book a table</h2>
+      <p style="margin:-14px 0 22px">We keep half the tables for walk-ins. For groups over 8, give us a ring.</p>
+      <form onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('thanks').style.display='block';">
+        <input required placeholder="Your name">
+        <div class="r2"><input required type="date"><select><option>9:00</option><option>10:00</option><option selected>11:00</option><option>12:00</option><option>13:00</option></select></div>
+        <div class="r2"><select><option>2 guests</option><option>3 guests</option><option>4 guests</option><option>5–8 guests</option></select><input required type="tel" placeholder="Phone"></div>
+        <button class="btn btn-green" style="justify-content:center">Reserve table</button>
+      </form>
+      <div class="thanks" id="thanks">Done. We've sent you a text to confirm.</div>
+    </div>
+    <div class="find" id="find">
+      <h2>Find us</h2>
+      <ul class="hours"><li><span>Mon – Fri</span><b>7:30 – 16:00</b></li><li><span>Sat – Sun</span><b>8:30 – 16:00</b></li><li><span>Kitchen</span><b>until 15:00</b></li></ul>
+      <iframe class="map" title="Map of Ancoats, Manchester" loading="lazy" style="border:0;width:100%;display:block;filter:saturate(.7)" src="https://www.openstreetmap.org/export/embed.html?bbox=-2.233,53.4815,-2.22,53.488&amp;layer=mapnik"></iframe>
+      <p style="margin-top:18px;color:var(--muted)">Blossom Street, Ancoats, Manchester M4 · 0161 496 0254</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap" style="text-align:center">
+    <span class="tag">@bloom.ancoats</span><h2 style="font-size:clamp(36px,4vw,52px);margin-top:12px">On Instagram</h2>
+    <div class="insta"><div><img src="img/hero.jpg" alt=""></div><div><img src="img/brunch.jpg" alt=""></div><div><img src="img/space.jpg" alt=""></div><div><img src="img/interior.jpg" alt=""></div><div><img src="img/brunch.jpg" alt=""></div><div><img src="img/hero.jpg" alt=""></div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot"><div><div class="logo">Bloom</div><p style="margin-top:12px">Coffee and brunch in Ancoats.</p></div><div>Blossom Street, Ancoats<br>hello@bloomancoats.co.uk</div><div>Instagram · TikTok</div></div>
+    <div class="credit"><span>Bloom is a fictional café (concept site).</span><span>Designed by <a href="../index.html">Aryoven Web Studio</a></span></div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.remove('on')); t.classList.add('on');
+  document.querySelectorAll('.dish').forEach(d => d.hidden = d.dataset.c !== t.dataset.f);
+});
+(() => { // live open/closed badge from the opening hours
+  const d = new Date(), h = d.getHours() + d.getMinutes() / 60, wk = d.getDay() === 0 || d.getDay() === 6;
+  const open = wk ? h >= 8.5 && h < 16 : h >= 7.5 && h < 16;
+  const s = document.getElementById('status');
+  if (!open) { s.classList.add('closed'); s.querySelector('span').textContent = 'Closed · opens ' + (wk ? '8:30' : '7:30'); }
+})();
+document.querySelectorAll('.links a').forEach(a => a.onclick = () => document.getElementById('links').classList.remove('open'));
+</script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="fa">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>سالن سروین | پوست، مو و میکاپ</title>
+<meta name="description" content="پاک‌سازی و آبرسانی پوست، رنگ و فرم مو، میکاپ مجلسی و لیفت مژه. قیمت و مدت هر خدمت مشخص است؛ فقط با وقت قبلی.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Vazirmatn:wght@200;300;400;500;600&display=swap">
+<style>
+  :root {
+    --night: #fbf6f0;
+    --night-2: #f4eae0;
+    --panel: #ffffff;
+    --gold: #a97a3e;
+    --gold-2: #c79b5c;
+    --cream: #2b211a;
+    --muted: #8b7c6e;
+    --line: rgba(43, 33, 26, .13);
+    --line-gold: rgba(169, 122, 62, .4);
+    --latin: "Cormorant Garamond", Georgia, serif;
+    --body: "Vazirmatn", Tahoma, system-ui, sans-serif;
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+
+  body { margin: 0; background: var(--night); color: var(--cream); font-family: var(--body); font-weight: 300; font-size: 16px; line-height: 1.85; -webkit-font-smoothing: antialiased; }
+  .page { direction: rtl; overflow-x: clip; }
+  .wrap { max-width: 1160px; margin-inline: auto; padding-inline: clamp(16px, 4.5vw, 50px); }
+  img { display: block; max-width: 100%; height: auto; }
+  .ico { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+  .strip { background: linear-gradient(90deg, #ead6bb, #f7eadb, #ead6bb); color: #6d4c21; text-align: center; font-size: .82rem; font-weight: 500; padding: 8px 16px; }
+
+  .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: rgba(251, 246, 240, .92); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .top__in { display: flex; align-items: center; gap: 20px; padding-block: 15px; }
+  .brand { text-decoration: none; display: grid; gap: 1px; line-height: 1.2; }
+  .brand b { font-family: var(--latin); font-size: 1.5rem; font-weight: 500; color: var(--gold); letter-spacing: .04em; }
+  .brand span { font-size: .66rem; letter-spacing: .26em; color: var(--muted); }
+  .nav { display: flex; gap: clamp(14px, 2.4vw, 30px); margin-inline: auto; }
+  .nav a { color: var(--muted); text-decoration: none; font-size: .92rem; padding-block: 6px; position: relative; }
+  .nav a:hover, .nav a[aria-current="page"] { color: var(--cream); }
+  .nav a[aria-current="page"]::after { content: ""; position: absolute; inset-block-end: 0; inset-inline: 18%; height: 1px; background: var(--gold); }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px; border: 0; cursor: pointer; text-decoration: none;
+    padding: 13px 26px; border-radius: 2px; font: 500 .9rem/1 var(--body);
+    background: linear-gradient(135deg, var(--gold-2), var(--gold)); color: #fffaf3;
+    transition: filter .2s ease, transform .2s ease;
+  }
+  .btn:hover { filter: brightness(1.08); transform: translateY(-2px); }
+  .btn--line { background: transparent; color: var(--cream); box-shadow: inset 0 0 0 1px var(--line); }
+  .btn--line:hover { box-shadow: inset 0 0 0 1px var(--line-gold); color: var(--gold-2); }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+
+  .eyebrow { display: inline-flex; align-items: center; gap: 11px; color: var(--gold); font-family: var(--latin); font-size: .82rem; letter-spacing: .36em; text-transform: uppercase; }
+  .eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; overflow: hidden; }
+  .hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; min-height: clamp(380px, 52vw, 520px); }
+  .hero__text { display: grid; align-content: center; gap: 18px; padding-block: clamp(34px, 6vw, 70px); padding-inline-end: clamp(14px, 3vw, 40px); }
+  h1 { font-family: var(--latin); font-weight: 400; font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: 1.1; margin: 0; letter-spacing: .01em; }
+  h1 em { font-style: italic; color: var(--gold); }
+  .hero p { margin: 0; color: var(--muted); max-width: 34ch; }
+  .hero__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  .hero__photo { position: relative; min-height: clamp(360px, 46vw, 560px); overflow: hidden; }
+  .hero__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 40% 32%; }
+  .hero__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(251, 246, 240, 0) 38%, rgba(251, 246, 240, .55) 72%, var(--night) 98%); }
+  .hero__note { position: absolute; inset-block-end: 16px; inset-inline-end: 18px; z-index: 2; font-family: var(--latin); font-size: .78rem; letter-spacing: .24em; color: rgba(255, 252, 248, .85); }
+
+  /* ---------- sections ---------- */
+  section { padding-block: clamp(42px, 6vw, 86px); }
+  .head { display: grid; justify-items: center; text-align: center; gap: 12px; margin-bottom: clamp(26px, 4vw, 44px); }
+  h2 { font-family: var(--latin); font-weight: 400; font-size: clamp(2rem, 5vw, 2.9rem); margin: 0; }
+  h2 em { font-style: italic; color: var(--gold); }
+  .head p { margin: 0; color: var(--muted); max-width: 46ch; font-size: .94rem; }
+  .divider { display: flex; align-items: center; gap: 10px; color: var(--line-gold); }
+  .divider::before, .divider::after { content: ""; height: 1px; width: 44px; background: currentColor; }
+  .divider span { width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); }
+
+  .services { background: var(--night-2); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: clamp(14px, 2vw, 22px); }
+  .svc { background: var(--panel); border: 1px solid var(--line); display: flex; flex-direction: column; min-width: 0; transition: border-color .3s ease, transform .3s ease; }
+  .svc:hover { border-color: var(--line-gold); transform: translateY(-5px); }
+  .svc__shot { aspect-ratio: 4 / 5; overflow: hidden; }
+  .svc__shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.8,.2,1); filter: saturate(.95); }
+  .svc:hover .svc__shot img { transform: scale(1.05); }
+  .svc__body { padding: 16px 16px 18px; display: grid; gap: 8px; }
+  .svc h3 { margin: 0; font-family: var(--latin); font-size: 1.32rem; font-weight: 500; }
+  .svc p { margin: 0; font-size: .84rem; color: var(--muted); line-height: 1.75; }
+  .svc__foot { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; border-top: 1px solid var(--line); padding-top: 11px; margin-top: 4px; }
+  .svc__price { color: var(--gold); font-size: 1.02rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+  .svc__time { font-size: .78rem; color: var(--muted); }
+
+  /* ---------- booking ---------- */
+  .book__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(24px, 4vw, 54px); align-items: center; }
+  .book__photo { position: relative; }
+  .book__photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+  .book__photo::after { content: ""; position: absolute; inset: 12px; border: 1px solid var(--line-gold); pointer-events: none; }
+  .sheet { display: grid; gap: 16px; }
+  .sheet h2 { text-align: start; }
+  .sheet p.sub { margin: 0; color: var(--muted); max-width: 38ch; }
+  .picker { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+  .field { display: grid; gap: 6px; min-width: 0; }
+  .field label { font-size: .76rem; color: var(--muted); letter-spacing: .05em; }
+  .field select, .field input {
+    width: 100%; font: 300 .95rem/1.5 var(--body); color: var(--cream);
+    background: var(--panel); border: 1px solid var(--line); border-radius: 2px; padding: 12px 12px;
+  }
+  .field select option { color: #2b211a; }
+  .slots { display: flex; gap: 8px; flex-wrap: wrap; }
+  .slot { border: 1px solid var(--line); background: transparent; color: var(--cream); padding: 9px 15px; cursor: pointer; font: 300 .9rem/1 var(--body); font-variant-numeric: tabular-nums; transition: all .2s ease; }
+  .slot[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: #fffaf3; font-weight: 500; }
+  .slot[disabled] { opacity: .3; cursor: not-allowed; text-decoration: line-through; }
+  .summary { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); padding-top: 14px; }
+  .summary b { font-family: var(--latin); font-size: 1.8rem; color: var(--gold); font-variant-numeric: tabular-nums; }
+  .note { margin: 0; font-size: .84rem; color: var(--muted); }
+  .note[data-state="done"] { color: var(--gold-2); }
+
+  /* ---------- words ---------- */
+  .words { background: var(--night-2); }
+  .words__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: clamp(14px, 2vw, 24px); }
+  .word { border: 1px solid var(--line); padding: 22px; display: grid; gap: 12px; align-content: start; }
+  .stars { color: var(--gold); letter-spacing: 2px; font-size: .88rem; }
+  .word p { margin: 0; font-size: .93rem; }
+  .word footer { color: var(--muted); font-size: .82rem; border-top: 1px solid var(--line); padding-top: 11px; }
+  .word footer b { color: var(--cream); font-weight: 400; }
+
+  /* ---------- gallery ---------- */
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+  .gallery figure { margin: 0; overflow: hidden; position: relative; }
+  .gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform .8s cubic-bezier(.2,.8,.2,1); }
+  .gallery figure:hover img { transform: scale(1.07); }
+  .handle { text-align: center; color: var(--gold); font-family: var(--latin); letter-spacing: .28em; font-size: .9rem; margin-bottom: 18px; }
+
+  /* ---------- footer ---------- */
+  .foot { border-top: 1px solid var(--line); }
+  .foot__grid { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: clamp(22px, 3.5vw, 46px); padding-block: clamp(34px, 5vw, 58px); }
+  .foot h4 { font-family: var(--latin); letter-spacing: .3em; font-size: .78rem; color: var(--gold); margin: 0 0 16px; font-weight: 400; text-transform: uppercase; }
+  .foot p, .foot a, .fline { color: var(--muted); font-size: .88rem; }
+  .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+  .foot a { text-decoration: none; }
+  .foot a:hover { color: var(--gold-2); }
+  .fline { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 11px; }
+  .fline .ico { color: var(--gold); margin-top: 7px; }
+  .social { display: flex; gap: 9px; margin-top: 14px; }
+  .social a { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line); color: var(--muted); }
+  .social a:hover { border-color: var(--line-gold); color: var(--gold); }
+  .foot__bar { border-top: 1px solid var(--line); padding-block: 16px 28px; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; font-size: .8rem; color: var(--muted); }
+  .concept { color: var(--gold); }
+
+  @media (max-width: 920px) {
+    .hero__grid, .book__grid, .foot__grid { grid-template-columns: 1fr; }
+    .hero__photo { order: -1; min-height: 260px; }
+    .hero__photo::after { background: linear-gradient(0deg, var(--night) 3%, rgba(251,246,240,0) 55%); }
+    .hero__text { padding-inline-end: 0; }
+    .nav { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .btn, .svc, .svc__shot img, .gallery img { transition: none; } }
+</style>
+
+<div class="page">
+  <div class="strip">تا پایان مهر: پاک‌سازی صورت با ۲۰٪ تخفیف برای نوبت‌های روزهای وسط هفته</div>
+
+  <header class="top">
+    <div class="wrap top__in">
+      <a class="brand" href="#top"><b>سالن سروین</b><span>SARVIN BEAUTY</span></a>
+      <nav class="nav">
+        <a href="#top" aria-current="page">خانه</a>
+        <a href="#services">خدمات</a>
+        <a href="#book">رزرو نوبت</a>
+        <a href="#words">نظرها</a>
+        <a href="#contact">تماس</a>
+      </nav>
+      <a class="btn" href="#book">رزرو نوبت</a>
+    </div>
+  </header>
+
+  <div id="top"></div>
+
+  <section class="hero">
+    <div class="hero__grid">
+      <div class="wrap hero__text" style="max-width:none;">
+        <span class="eyebrow">Skin · Hair · Makeup</span>
+        <h1>پوستی که <em>نفس می‌کشد</em></h1>
+        <p>پاک‌سازی، هیدرودرم و میکرونیدلینگ با دستگاه‌های روز و محصولات اصل. هر نوبت فقط برای یک نفر، بدون عجله.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#book">نوبت بگیرید</a>
+          <a class="btn btn--line" href="#services">دیدن خدمات</a>
+        </div>
+      </div>
+      <div class="hero__photo">
+        <img src="bt/hero.jpg" width="960" height="640" alt="مراقبت پوست با سرم" fetchpriority="high" decoding="async">
+        <span class="hero__note">EST. 1398</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="head">
+        <span class="divider"><span></span></span>
+        <h2>خدمات <em>سالن</em></h2>
+        <p>قیمت‌ها نهایی است و شامل مواد مصرفی می‌شود. زمان هر خدمت را هم نوشته‌ایم تا برنامه‌ی روزتان به هم نریزد.</p>
+      </div>
+      <div class="cards">
+        <article class="svc">
+          <div class="svc__shot"><img src="bt/s1.jpg" width="850" height="567" alt="پاک‌سازی و آبرسانی پوست" loading="lazy" decoding="async"></div>
+          <div class="svc__body">
+            <h3>پاک‌سازی و آبرسانی</h3>
+            <p>تمیزکردن عمیق، بخور، ماسک و آبرسانی؛ مناسب پوست خسته و بی‌حال.</p>
+            <div class="svc__foot"><span class="svc__price">۹۸۰٬۰۰۰ تومان</span><span class="svc__time">۷۰ دقیقه</span></div>
+          </div>
+        </article>
+        <article class="svc">
+          <div class="svc__shot"><img src="bt/s2.jpg" width="850" height="1275" alt="رنگ و فرم مو" loading="lazy" decoding="async"></div>
+          <div class="svc__body">
+            <h3>رنگ و فرم مو</h3>
+            <p>رنگ ریشه یا بالیاژ، با مشاوره‌ی رنگ متناسب با پوست و سلیقه‌تان.</p>
+            <div class="svc__foot"><span class="svc__price">از ۱٬۶۰۰٬۰۰۰ تومان</span><span class="svc__time">۱۵۰ دقیقه</span></div>
+          </div>
+        </article>
+        <article class="svc">
+          <div class="svc__shot"><img src="bt/s3.jpg" width="850" height="1275" alt="میکاپ عروس و مجلسی" loading="lazy" decoding="async"></div>
+          <div class="svc__body">
+            <h3>میکاپ مجلسی</h3>
+            <p>آرایش ماندگار برای مهمانی و عقد، با تست رنگ قبل از روز اصلی.</p>
+            <div class="svc__foot"><span class="svc__price">۲٬۴۰۰٬۰۰۰ تومان</span><span class="svc__time">۱۲۰ دقیقه</span></div>
+          </div>
+        </article>
+        <article class="svc">
+          <div class="svc__shot"><img src="bt/s4.jpg" width="850" height="567" alt="لیفت مژه و فرم ابرو" loading="lazy" decoding="async"></div>
+          <div class="svc__body">
+            <h3>لیفت مژه و ابرو</h3>
+            <p>لیفت و رنگ مژه، اصلاح و فرم ابرو متناسب با چهره.</p>
+            <div class="svc__foot"><span class="svc__price">۶۵۰٬۰۰۰ تومان</span><span class="svc__time">۵۰ دقیقه</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="wrap book__grid">
+      <div class="book__photo">
+        <img src="bt/room.jpg" width="1100" height="1650" alt="آرایشگر در حال کار روی چهره‌ی مشتری" loading="lazy" decoding="async">
+      </div>
+      <form class="sheet" id="bookForm" novalidate>
+        <span class="eyebrow">Appointment</span>
+        <h2>نوبت <em>بگیرید</em></h2>
+        <p class="sub">خدمت و ساعت را انتخاب کنید؛ ما تا یک ساعت بعد برای تأیید پیام می‌دهیم. لغو تا شش ساعت قبل رایگان است.</p>
+        <div class="picker">
+          <div class="field">
+            <label for="service">خدمت</label>
+            <select id="service">
+              <option value="980000" data-min="70">پاک‌سازی و آبرسانی</option>
+              <option value="1600000" data-min="150">رنگ و فرم مو</option>
+              <option value="2400000" data-min="120">میکاپ مجلسی</option>
+              <option value="650000" data-min="50" selected>لیفت مژه و ابرو</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="day">روز</label>
+            <input id="day" type="date">
+          </div>
+          <div class="field" style="grid-column: 1 / -1;">
+            <label id="slotsLabel">ساعت</label>
+            <div class="slots" role="group" aria-labelledby="slotsLabel">
+              <button type="button" class="slot" aria-pressed="false">۱۰:۰۰</button>
+              <button type="button" class="slot" aria-pressed="true">۱۲:۳۰</button>
+              <button type="button" class="slot" disabled>۱۵:۰۰</button>
+              <button type="button" class="slot" aria-pressed="false">۱۷:۳۰</button>
+              <button type="button" class="slot" aria-pressed="false">۱۹:۰۰</button>
+            </div>
+          </div>
+          <div class="field"><label for="name">نام</label><input id="name" type="text" placeholder="نام و فامیل"></div>
+          <div class="field"><label for="tel">شماره تماس</label><input id="tel" type="tel" dir="ltr" placeholder="۰۹۱۲ ..."></div>
+        </div>
+        <div class="summary"><span id="summaryText">لیفت مژه و ابرو · ۵۰ دقیقه</span><b id="summaryPrice">۶۵۰٬۰۰۰</b></div>
+        <button class="btn" type="submit">ثبت درخواست نوبت</button>
+        <p class="note" id="bookNote">این یک نسخه‌ی نمونه است و نوبت واقعی رزرو نمی‌شود.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="words" id="words">
+    <div class="wrap">
+      <div class="head">
+        <span class="divider"><span></span></span>
+        <h2>حرف <em>مشتری‌ها</em></h2>
+      </div>
+      <div class="words__grid">
+        <article class="word">
+          <span class="stars">★★★★★</span>
+          <p>بعد از دو جلسه پاک‌سازی، پوستم واقعاً فرق کرد. خانم سروین با حوصله توضیح می‌دهد چه چیزی برای پوست من مناسب است.</p>
+          <footer><b>نگار مرادی</b> · مشتری همیشگی</footer>
+        </article>
+        <article class="word">
+          <span class="stars">★★★★★</span>
+          <p>برای عقدم میکاپ کردم. تست رنگ گرفتند و روز مراسم دقیقاً همان شد. تا آخر شب هم ماند.</p>
+          <footer><b>ساناز</b> · عروس مهر</footer>
+        </article>
+        <article class="word">
+          <span class="stars">★★★★★</span>
+          <p>تمیزی سالن و وسایل یک‌بارمصرف برایم مهم بود؛ همین باعث شد مشتری ثابت شوم.</p>
+          <footer><b>الهام ر.</b> · رنگ مو</footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="handle">@sarvin.beauty</p>
+      <div class="gallery">
+        <figure><img src="bt/g1.jpg" width="850" height="567" alt="نمونه کار پوست" loading="lazy" decoding="async"></figure>
+        <figure><img src="bt/g2.jpg" width="850" height="567" alt="نمونه کار مراقبت پوست" loading="lazy" decoding="async"></figure>
+        <figure><img src="bt/g3.jpg" width="850" height="513" alt="فضای سالن" loading="lazy" decoding="async"></figure>
+        <figure><img src="bt/g4.jpg" width="850" height="850" alt="محصولات مراقبت پوست" loading="lazy" decoding="async"></figure>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot" id="contact">
+    <div class="wrap">
+      <div class="foot__grid">
+        <div>
+          <a class="brand" href="#top"><b>سالن سروین</b><span>SARVIN BEAUTY</span></a>
+          <p style="margin-top:14px;">سالن تخصصی پوست، مو و میکاپ. با وقت قبلی، برای اینکه کسی در صف ننشیند.</p>
+          <div class="social">
+            <a href="#top" aria-label="اینستاگرام"><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.4"/><circle cx="17" cy="7" r=".7" fill="currentColor"/></svg></a>
+            <a href="#top" aria-label="واتساپ"><svg class="ico" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-3.2-6.4"/><path d="M8.5 9.5c.4 3 2.9 5.5 6 6l1.3-1.8-2.2-1.2-1.1 1a7.6 7.6 0 0 1-2-2l1-1.1-1.2-2.2L8.5 9.5Z"/></svg></a>
+            <a href="#top" aria-label="تلگرام"><svg class="ico" viewBox="0 0 24 24"><path d="M21 5 3 11.5l5 1.8L19 7l-8.5 8.2.4 4.3 2.6-3 4 3L21 5Z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">پوست و آبرسانی</a></li>
+            <li><a href="#services">رنگ و فرم مو</a></li>
+            <li><a href="#services">میکاپ مجلسی</a></li>
+            <li><a href="#book">رزرو نوبت</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="fline"><svg class="ico" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4Z"/></svg><span dir="ltr" style="font-variant-numeric: tabular-nums;">۰۹۱۲ ۳۶۸ ۵۱۴۰</span></div>
+          <div class="fline"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><span>خیابان ولیعصر، کوچه‌ی نسترن، ساختمان آرام، طبقه‌ی دوم</span></div>
+          <div class="fline"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>شنبه تا پنجشنبه ۱۰ تا ۲۰ · جمعه تعطیل</span></div>
+        </div>
+      </div>
+      <div class="foot__bar">
+        <span class="concept">سالن سروین یک سالن خیالی است (سایت نمونه).</span>
+        <span>طراحی: <a href="../index.html">استودیو وب آریون</a></span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  var fa = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+  function toFa(v) { return String(v).replace(/\d/g, function (d) { return fa[Number(d)]; }); }
+  function money(v) { return toFa(v.toLocaleString('en-US')); }
+
+  var service = document.getElementById('service');
+  function render() {
+    var option = service.options[service.selectedIndex];
+    document.getElementById('summaryText').textContent = option.text + ' · ' + toFa(option.dataset.min) + ' دقیقه';
+    document.getElementById('summaryPrice').textContent = money(Number(option.value));
+  }
+  service.addEventListener('change', render);
+  render();
+
+  document.querySelectorAll('.slot').forEach(function (slot) {
+    slot.addEventListener('click', function () {
+      document.querySelectorAll('.slot').forEach(function (other) {
+        if (!other.disabled) { other.setAttribute('aria-pressed', String(other === slot)); }
+      });
+    });
+  });
+
+  document.getElementById('bookForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    var note = document.getElementById('bookNote');
+    var option = service.options[service.selectedIndex];
+    var time = (document.querySelector('.slot[aria-pressed="true"]') || {}).textContent || '۱۲:۳۰';
+    var who = document.getElementById('name').value.trim();
+    note.dataset.state = 'done';
+    note.textContent = (who ? who + '، ' : '') + option.text + ' ساعت ' + time.trim() +
+      ' در این نمونه ثبت شد. در سایت واقعی، پیام تأیید برایتان می‌آید.';
+  });
+</script>
+
+<script>
+(function(){var t=new Date(),n=new Date(t.getTime()+864e5);function iso(d){return d.toISOString().slice(0,10)}document.querySelectorAll('input[type="date"]').forEach(function(i){i.min=iso(t);if(!i.value)i.value=iso(n);});})();
+</script>
+</html>
